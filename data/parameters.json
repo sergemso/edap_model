@@ -1,0 +1,124 @@
+{
+    "default_model": {
+        "alpha_T": 0.52,
+        "beta_T": 0.167,
+        "gamma_T": 0.078,
+        "T_min": 0.08,
+        "alpha_K_base": 0.103,
+        "beta_K": 0.18,
+        "K_max_coeff": 0.95,
+        "K_half": 0.05,
+        "T_automation": 0.85,
+        "alpha_C": 0.31,
+        "gamma_C": 0.20,
+        "eta": 0.781,
+        "K0": 0.55,
+        "delta": 0.25,
+        "sigma": 0.12,
+        "T_singularity": 0.65,
+        "epsilon_tech": 0.40,
+        "K_shadow_threshold": 0.50,
+        "lambda_shadow": 0.050,
+        "mu_shadow": 0.382,
+        "historical_T_peak": 0.50,
+        "decay_factor": 0.70,
+        "recovery_potential_0": 1.0,
+        "T_reset_threshold": 0.06,
+        "sigma_T": 0.01,
+        "sigma_K": 0.05,
+        "delta_T_reset": 0.10,
+        "delta_K_reset": 0.10,
+        "delta_C_reset": 0.10,
+        "alpha_recovery_base": 0.05,
+        "epsilon_recovery": 0.01
+    },
+    "civilizations": {
+        "Rome": {
+            "T0": 0.26,
+            "K0": 0.33,
+            "C0": 0.69,
+            "t_span": 100,
+            "color": "#8B0000",
+            "label": "Rome (100 BCE – 476 CE)",
+            "shocks": {
+                "60": 0.5,
+                "80": 0.7
+            },
+            "historical_T_peak": 0.33,
+            "decay_factor": 0.50
+        },
+        "USSR": {
+            "T0": 0.06,
+            "K0": 0.40,
+            "C0": 0.31,
+            "t_span": 69,
+            "color": "#CC0000",
+            "label": "USSR (1922–1991)",
+            "shocks": {
+                "68": 0.7
+            },
+            "historical_T_peak": 0.40,
+            "decay_factor": 0.30
+        },
+        "Russia": {
+            "T0": 0.37,
+            "K0": 0.50,
+            "C0": 0.35,
+            "t_span": 36,
+            "color": "#FF4500",
+            "label": "Russia (2000–2036)",
+            "shocks": {
+                "8": 0.5,
+                "14": 0.6,
+                "22": 0.8
+            },
+            "historical_T_peak": 0.46,
+            "decay_factor": 0.40
+        },
+        "USA": {
+            "T0": 0.23,
+            "K0": 0.31,
+            "C0": 0.55,
+            "t_span": 36,
+            "color": "#006400",
+            "label": "USA (2000–2036)",
+            "shocks": {
+                "8": 0.5,
+                "20": 0.4
+            },
+            "historical_T_peak": 0.76,
+            "decay_factor": 0.85
+        }
+    },
+    "monte_carlo": {
+        "n_simulations": 1000,
+        "t_forecast": 25,
+        "start_year": 2025
+    },
+    "bifurcation": {
+        "alpha_K_range": [
+            0.02,
+            0.50,
+            40
+        ],
+        "delta_range": [
+            0.02,
+            0.30,
+            40
+        ],
+        "n_initial_states": 25,
+        "t_span": 80
+    },
+    "numerical": {
+        "euler_dt": 0.05,
+        "calibration_penalty_weight": 5.0,
+        "de_maxiter": 50,
+        "de_popsize": 20,
+        "gpu_threads_per_block": 128
+    },
+    "paths": {
+        "data_dir": "data/raw/",
+        "output_dir": "output/",
+        "paper_source": "paper/article.tex"
+    }
+}

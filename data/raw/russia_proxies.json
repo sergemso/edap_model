@@ -1,0 +1,290 @@
+{
+    "civilization": "Russian Federation",
+    "period": {
+        "start": 2000,
+        "end": 2036
+    },
+    "data_points": [
+        {
+            "year": 2000,
+            "label": "Post-default recovery",
+            "T_proxies": {
+                "energy_per_capita_GJ": 120.0,
+                "trade_volume_index": 0.30,
+                "urbanization_rate": 0.73,
+                "rnd_spending_pct_gdp": 1.05,
+                "high_tech_export_share": 0.04
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.14,
+                "top_10_percent_wealth_share": 0.55,
+                "tax_regressivity_index": 0.55,
+                "rent_sector_dominance": 0.70,
+                "state_capture_index": 0.60
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.20,
+                "generalized_trust_proxy": 0.25,
+                "social_mobility_index": 0.30,
+                "education_spending_pct_gdp": 2.9,
+                "healthcare_spending_pct_gdp": 3.0
+            }
+        },
+        {
+            "year": 2003,
+            "label": "Early Putin boom (Yukos affair)",
+            "T_proxies": {
+                "energy_per_capita_GJ": 135.0,
+                "trade_volume_index": 0.38,
+                "urbanization_rate": 0.73,
+                "rnd_spending_pct_gdp": 1.15,
+                "high_tech_export_share": 0.04
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.16,
+                "top_10_percent_wealth_share": 0.58,
+                "tax_regressivity_index": 0.50,
+                "rent_sector_dominance": 0.72,
+                "state_capture_index": 0.68
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.22,
+                "generalized_trust_proxy": 0.28,
+                "social_mobility_index": 0.28,
+                "education_spending_pct_gdp": 2.8,
+                "healthcare_spending_pct_gdp": 3.1
+            }
+        },
+        {
+            "year": 2008,
+            "label": "Pre-crisis peak",
+            "T_proxies": {
+                "energy_per_capita_GJ": 155.0,
+                "trade_volume_index": 0.55,
+                "urbanization_rate": 0.74,
+                "rnd_spending_pct_gdp": 1.04,
+                "high_tech_export_share": 0.05
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.20,
+                "top_10_percent_wealth_share": 0.62,
+                "tax_regressivity_index": 0.45,
+                "rent_sector_dominance": 0.68,
+                "state_capture_index": 0.65
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.25,
+                "generalized_trust_proxy": 0.30,
+                "social_mobility_index": 0.25,
+                "education_spending_pct_gdp": 3.2,
+                "healthcare_spending_pct_gdp": 3.4
+            }
+        },
+        {
+            "year": 2010,
+            "label": "Post-GFC recovery",
+            "T_proxies": {
+                "energy_per_capita_GJ": 150.0,
+                "trade_volume_index": 0.50,
+                "urbanization_rate": 0.74,
+                "rnd_spending_pct_gdp": 1.13,
+                "high_tech_export_share": 0.05
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.19,
+                "top_10_percent_wealth_share": 0.60,
+                "tax_regressivity_index": 0.48,
+                "rent_sector_dominance": 0.70,
+                "state_capture_index": 0.67
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.23,
+                "generalized_trust_proxy": 0.28,
+                "social_mobility_index": 0.24,
+                "education_spending_pct_gdp": 3.0,
+                "healthcare_spending_pct_gdp": 3.2
+            }
+        },
+        {
+            "year": 2014,
+            "label": "Post-Crimea sanctions start",
+            "T_proxies": {
+                "energy_per_capita_GJ": 148.0,
+                "trade_volume_index": 0.42,
+                "urbanization_rate": 0.74,
+                "rnd_spending_pct_gdp": 1.07,
+                "high_tech_export_share": 0.06
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.22,
+                "top_10_percent_wealth_share": 0.65,
+                "tax_regressivity_index": 0.50,
+                "rent_sector_dominance": 0.75,
+                "state_capture_index": 0.72
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.20,
+                "generalized_trust_proxy": 0.32,
+                "social_mobility_index": 0.22,
+                "education_spending_pct_gdp": 2.8,
+                "healthcare_spending_pct_gdp": 3.1
+            }
+        },
+        {
+            "year": 2016,
+            "label": "Sanctions adaptation / import substitution start",
+            "T_proxies": {
+                "energy_per_capita_GJ": 145.0,
+                "trade_volume_index": 0.36,
+                "urbanization_rate": 0.74,
+                "rnd_spending_pct_gdp": 1.10,
+                "high_tech_export_share": 0.05
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.24,
+                "top_10_percent_wealth_share": 0.68,
+                "tax_regressivity_index": 0.55,
+                "rent_sector_dominance": 0.78,
+                "state_capture_index": 0.75
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.18,
+                "generalized_trust_proxy": 0.30,
+                "social_mobility_index": 0.20,
+                "education_spending_pct_gdp": 2.6,
+                "healthcare_spending_pct_gdp": 2.9
+            }
+        },
+        {
+            "year": 2018,
+            "label": "Pre-SVO: pension reform, VAT hike",
+            "T_proxies": {
+                "energy_per_capita_GJ": 148.0,
+                "trade_volume_index": 0.38,
+                "urbanization_rate": 0.74,
+                "rnd_spending_pct_gdp": 0.99,
+                "high_tech_export_share": 0.04
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.25,
+                "top_10_percent_wealth_share": 0.70,
+                "tax_regressivity_index": 0.60,
+                "rent_sector_dominance": 0.80,
+                "state_capture_index": 0.78
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.16,
+                "generalized_trust_proxy": 0.25,
+                "social_mobility_index": 0.18,
+                "education_spending_pct_gdp": 2.5,
+                "healthcare_spending_pct_gdp": 2.8
+            }
+        },
+        {
+            "year": 2020,
+            "label": "COVID / constitutional reset",
+            "T_proxies": {
+                "energy_per_capita_GJ": 140.0,
+                "trade_volume_index": 0.32,
+                "urbanization_rate": 0.75,
+                "rnd_spending_pct_gdp": 1.04,
+                "high_tech_export_share": 0.04
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.27,
+                "top_10_percent_wealth_share": 0.72,
+                "tax_regressivity_index": 0.62,
+                "rent_sector_dominance": 0.82,
+                "state_capture_index": 0.80
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.15,
+                "generalized_trust_proxy": 0.22,
+                "social_mobility_index": 0.16,
+                "education_spending_pct_gdp": 2.4,
+                "healthcare_spending_pct_gdp": 3.0
+            }
+        },
+        {
+            "year": 2022,
+            "label": "SVO start / full sanctions / mobilization",
+            "T_proxies": {
+                "energy_per_capita_GJ": 138.0,
+                "trade_volume_index": 0.20,
+                "urbanization_rate": 0.75,
+                "rnd_spending_pct_gdp": 0.90,
+                "high_tech_export_share": 0.02
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.30,
+                "top_10_percent_wealth_share": 0.75,
+                "tax_regressivity_index": 0.68,
+                "rent_sector_dominance": 0.85,
+                "state_capture_index": 0.85
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.12,
+                "generalized_trust_proxy": 0.20,
+                "social_mobility_index": 0.12,
+                "education_spending_pct_gdp": 2.3,
+                "healthcare_spending_pct_gdp": 2.6
+            }
+        },
+        {
+            "year": 2024,
+            "label": "Current: war economy / import substitution forced",
+            "T_proxies": {
+                "energy_per_capita_GJ": 142.0,
+                "trade_volume_index": 0.15,
+                "urbanization_rate": 0.75,
+                "rnd_spending_pct_gdp": 0.85,
+                "high_tech_export_share": 0.02
+            },
+            "K_proxies": {
+                "top_1_percent_income_share": 0.32,
+                "top_10_percent_wealth_share": 0.78,
+                "tax_regressivity_index": 0.70,
+                "rent_sector_dominance": 0.88,
+                "state_capture_index": 0.88
+            },
+            "C_proxies": {
+                "public_infrastructure_share": 0.10,
+                "generalized_trust_proxy": 0.18,
+                "social_mobility_index": 0.10,
+                "education_spending_pct_gdp": 2.2,
+                "healthcare_spending_pct_gdp": 2.5
+            }
+        }
+    ],
+    "data_sources": {
+        "energy_per_capita_GJ": "Rosstat energy balance; BP Statistical Review; IEA Russia profile (2024)",
+        "trade_volume_index": "World Bank WITS database; ratio of Russian trade to GDP, normalized to 2008 peak",
+        "urbanization_rate": "Rosstat demographic yearbook; UN World Urbanization Prospects",
+        "rnd_spending_pct_gdp": "UNESCO Science Report; HSE ISSEK indicators; Russia R&D spending as % GDP",
+        "high_tech_export_share": "World Bank TCdata360; share of high-tech exports in manufactured exports",
+        "top_1_percent_income_share": "World Inequality Database (WID.world); Novokmet, Piketty & Zucman (2018)",
+        "top_10_percent_wealth_share": "World Inequality Database; Credit Suisse Global Wealth Report",
+        "tax_regressivity_index": "Flat 13% PIT 2001-2020; 15% over 5M rubles from 2021; indirect tax share ~55% of budget; property tax negligible; high payroll tax regressivity",
+        "rent_sector_dominance": "Rosstat GDP by sector; oil & gas 30-40% of budget 2000-2014, 50%+ from 2022; state corporate control via SOEs ~60% of GDP (IMF 2019)",
+        "state_capture_index": "EBRD transition indicators; World Bank Governance Indicators; Transparency International CPI; V-Dem Polyarchy index",
+        "public_infrastructure_share": "Rosstat; share of consolidated budget on public goods (roads, utilities, public transport) vs defense/security",
+        "generalized_trust_proxy": "World Values Survey wave 7; Levada Center 'do you trust most people?' trend; ESS Russia data",
+        "social_mobility_index": "HSE social mobility studies; World Bank 'Social Mobility in Russia' (2018); intergenerational income elasticity ~0.5",
+        "education_spending_pct_gdp": "UNESCO Institute for Statistics; Rosstat; OECD Education at a Glance",
+        "healthcare_spending_pct_gdp": "WHO Global Health Expenditure Database; Rosstat; Federal Treasury execution data"
+    },
+    "notes": {
+        "period_2000_2018": "Recovery and stabilization: flat tax, oil rent, initial import substitution after 2014 sanctions. Rising K (state capture, rent concentration) offset by growing T (energy exports, consumption boom). C declines slowly as trust erodes.",
+        "period_2018_2036_projection": "Accelerated degradation: pension reform + VAT hike (2018) mark shift to domestic extraction. SVO (2022) triggers self-sanctioning via technological isolation, forced import substitution with inferior domestic analogs, military Keynesianism. K rises sharply as war economy concentrates resources in state/military-industrial elite. T declines due to brain drain, technology embargo, degradation of civilian capital stock. C collapses as repression + atomization intensify.",
+        "key_mechanisms": [
+            "Pension reform (2018): extracted ~3% GDP from households, direct K increase",
+            "VAT hike 18->20% (2019): regressive consumption tax, K++",
+            "SVO self-sanctions: voluntary cutoff from Western tech stacks, equipment, components",
+            "Import substitution: replacement of foreign tech with lower-quality domestic analogs reduces T productivity",
+            "Excise growth: fuel, alcohol, tobacco excises rising faster than inflation -> regressive extraction",
+            "Housing/utility tariff growth: above inflation annual increases in communal payments",
+            "Brain drain: 500K-1M skilled workers emigrated 2022-2024",
+            "Military spending: 6-8% GDP on defense/security diverts resources from civilian T and C"
+        ]
+    }
+}

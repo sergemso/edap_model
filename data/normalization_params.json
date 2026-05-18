@@ -1,0 +1,142 @@
+{
+    "description": "Parameters for mapping raw proxies to normalized T, K, C indices [0,1]. All indices computed as weighted sum of min-max normalized proxies.",
+    "T_normalization": {
+        "method": "weighted_sum_minmax",
+        "description": "Technological level: energy throughput + trade complexity + urbanization + R&D intensity",
+        "proxies": {
+            "energy_per_capita_GJ": {
+                "weight": 0.30,
+                "min_global": 2.0,
+                "max_global": 300.0,
+                "description": "Total energy consumption per capita (GJ/year). Min = hunter-gatherer (~2), Max = modern high-income (~300)"
+            },
+            "trade_volume_index": {
+                "weight": 0.20,
+                "min_global": 0.0,
+                "max_global": 1.0,
+                "description": "Trade volume relative to civilization peak"
+            },
+            "urbanization_rate": {
+                "weight": 0.15,
+                "min_global": 0.0,
+                "max_global": 0.90,
+                "description": "Fraction of population in urban settlements"
+            },
+            "rnd_spending_pct_gdp": {
+                "weight": 0.20,
+                "min_global": 0.0,
+                "max_global": 5.0,
+                "description": "R&D spending as % of GDP"
+            },
+            "high_tech_export_share": {
+                "weight": 0.10,
+                "min_global": 0.0,
+                "max_global": 0.40,
+                "description": "Share of high-tech in manufactured exports"
+            },
+            "manufacturing_output_index": {
+                "weight": 0.05,
+                "min_global": 0.0,
+                "max_global": 1.0,
+                "description": "Manufacturing output relative to peak"
+            }
+        },
+        "calibration_points": {
+            "hunter_gatherer": 0.02,
+            "bronze_age_palace_economy": 0.18,
+            "peak_rome": 0.35,
+            "industrial_revolution_1850": 0.55,
+            "modern_high_income_2020": 0.95
+        }
+    },
+    "K_normalization": {
+        "method": "weighted_sum_minmax",
+        "description": "Intraspecific economic cannibalism: concentration + regressivity + rent dominance + state capture + financialization + external burden export",
+        "proxies": {
+            "top_1_percent_income_share": {
+                "weight": 0.20,
+                "min_global": 0.05,
+                "max_global": 0.45,
+                "description": "Share of pre-tax income accruing to top 1%"
+            },
+            "top_10_percent_wealth_share": {
+                "weight": 0.15,
+                "min_global": 0.20,
+                "max_global": 0.95,
+                "description": "Share of total private wealth held by top 10%"
+            },
+            "tax_regressivity_index": {
+                "weight": 0.18,
+                "min_global": 0.0,
+                "max_global": 1.0,
+                "description": "Effective tax rate ratio bottom 50% / top 1%. 0 = progressive, 1 = extremely regressive"
+            },
+            "rent_sector_dominance": {
+                "weight": 0.18,
+                "min_global": 0.0,
+                "max_global": 1.0,
+                "description": "Fraction of elite wealth from land rent / resource extraction / monopoly platforms vs trade/industry/innovation"
+            },
+            "state_capture_index": {
+                "weight": 0.12,
+                "min_global": 0.0,
+                "max_global": 1.0,
+                "description": "Degree to which elites control state institutions for private benefit"
+            },
+            "financialization_index": {
+                "weight": 0.10,
+                "min_global": 0.0,
+                "max_global": 1.0,
+                "description": "Financial sector profits / total corporate profits; financial assets / GDP"
+            },
+            "external_debt_burden_export_index": {
+                "weight": 0.07,
+                "min_global": 0.0,
+                "max_global": 1.0,
+                "description": "Degree to which civilization successfully exports its debt/inflation burden to other civilizations via currency hegemony, forced revaluations, or reserve status"
+            }
+        }
+    },
+    "C_normalization": {
+        "method": "weighted_sum_minmax",
+        "description": "Cooperative potential: public goods + trust + mobility + human capital investment",
+        "proxies": {
+            "public_infrastructure_share": {
+                "weight": 0.25,
+                "min_global": 0.0,
+                "max_global": 0.70,
+                "description": "Share of state spending on public goods (infrastructure, science, commons) vs elite consumption / military / palaces"
+            },
+            "generalized_trust_proxy": {
+                "weight": 0.30,
+                "min_global": 0.0,
+                "max_global": 0.65,
+                "description": "Fraction of population expressing generalized trust in strangers / institutions"
+            },
+            "social_mobility_index": {
+                "weight": 0.20,
+                "min_global": 0.0,
+                "max_global": 0.70,
+                "description": "Intergenerational income elasticity inverted; probability of rising from bottom to top quartile"
+            },
+            "education_spending_pct_gdp": {
+                "weight": 0.10,
+                "min_global": 0.0,
+                "max_global": 8.0,
+                "description": "Public education spending as % of GDP"
+            },
+            "healthcare_spending_pct_gdp": {
+                "weight": 0.05,
+                "min_global": 0.0,
+                "max_global": 18.0,
+                "description": "Public + private healthcare spending as % of GDP. Note: US high spending with poor outcomes = inefficiency, not high C"
+            },
+            "union_density": {
+                "weight": 0.10,
+                "min_global": 0.0,
+                "max_global": 0.40,
+                "description": "Fraction of workforce unionized; proxy for collective bargaining / labor power"
+            }
+        }
+    }
+}

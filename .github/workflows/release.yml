@@ -1,0 +1,118 @@
+name: Release Pipeline
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set version from tag
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Release version: $VERSION"
+      
+      - name: Bump version in files
+        run: |
+          sed -i "s|Version [0-9]\+\.[0-9]\+\.[0-9]\+|Version ${{ env.VERSION }}|g" paper/article.tex
+          sed -i "s|version: [0-9]\+\.[0-9]\+\.[0-9]\+|version: ${{ env.VERSION }}|g" CITATION.cff
+          sed -i "s|\"version\": \"[0-9]\+\.[0-9]\+\.[0-9]\+\"|\"version\": \"${{ env.VERSION }}\"|g" .zenodo.json
+          sed -i "s|EDAP Model v[0-9]\+\.[0-9]\+\.[0-9]\+|EDAP Model v${{ env.VERSION }}|g" edap_model/model.py
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.ci.txt
+      
+      - name: Run tests
+        run: |
+          python -m pytest tests/test_model.py -v
+      
+      - name: Run full pipeline
+        run: |
+          python run_model.py
+      
+      - name: Compile paper
+        run: |
+          cd paper/
+          pdflatex -interaction=nonstopmode -halt-on-error article.tex
+          bibtex article
+          pdflatex -interaction=nonstopmode -halt-on-error article.tex
+          pdflatex -interaction=nonstopmode -halt-on-error article.tex
+      
+      - name: Check placeholder values
+        run: |
+          ! grep -r "XXXXXXX" paper/ CITATION.cff .zenodo.json README.md && echo "OK: No placeholders" || (echo "ERROR: Placeholder XXXXXXX found" && exit 1)
+      
+      - name: Guardrail and consistency check (LangChain + Groq)
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          python .github/scripts/guardrail_check.py \
+            paper/article.tex \
+            GUARDRAILS.md \
+            output/results.json
+      
+      - name: Diff metrics vs previous release
+        run: |
+          python .github/scripts/diff_metrics.py output/results.json
+      
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdf
+          path: paper/article.pdf
+      
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: output/
+      
+      - name: Create GitHub Release (draft)
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "EDAP Model v${{ env.VERSION }}"
+          draft: true
+          body: |
+            ## EDAP Model v${{ env.VERSION }}
+            
+            ### Release checklist
+            - [ ] All tests pass
+            - [ ] Guardrail check passes
+            - [ ] Article compiles
+            - [ ] Metrics consistent with article claims
+            
+            ### What's included
+            - Full source code (Python/Numba CUDA)
+            - Proxy data for 4 historical civilizations
+            - Compiled paper (PDF)
+            - All figures and numerical results
+            
+            ### Reproducibility
+            ```bash
+            pip install -r requirements.txt
+            python run_model.py
+            ```
+            
+            ### Citation
+            See CITATION.cff or Zenodo record.
+          files: |
+            paper/article.pdf
+            output/results.json
+            output/fig*.png
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

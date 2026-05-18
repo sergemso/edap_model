@@ -1,0 +1,145 @@
+{
+  "civilization": "Soviet Union",
+  "period": {"start": 1922, "end": 1991},
+  "data_points": [
+    {
+      "year": 1922,
+      "label": "Post-Civil War",
+      "T_proxies": {
+        "energy_per_capita_GJ": 8.0,
+        "trade_volume_index": 0.05,
+        "urbanization_rate": 0.15
+      },
+      "K_proxies": {
+        "top_1_percent_land_share": 0.05,
+        "senatorial_wealth_share": 0.10,
+        "tax_regressivity_index": 0.60,
+        "rent_sector_dominance": 0.20
+      },
+      "C_proxies": {
+        "public_buildings_share": 0.20,
+        "generalized_trust_proxy": 0.15,
+        "social_mobility_index": 0.30,
+        "infrastructure_investment_share": 0.15
+      }
+    },
+    {
+      "year": 1940,
+      "label": "Pre-WWII Industrialization",
+      "T_proxies": {
+        "energy_per_capita_GJ": 25.0,
+        "trade_volume_index": 0.10,
+        "urbanization_rate": 0.32
+      },
+      "K_proxies": {
+        "top_1_percent_land_share": 0.02,
+        "senatorial_wealth_share": 0.15,
+        "tax_regressivity_index": 0.50,
+        "rent_sector_dominance": 0.10
+      },
+      "C_proxies": {
+        "public_buildings_share": 0.55,
+        "generalized_trust_proxy": 0.40,
+        "social_mobility_index": 0.55,
+        "infrastructure_investment_share": 0.50
+      }
+    },
+    {
+      "year": 1960,
+      "label": "Khrushchev Era",
+      "T_proxies": {
+        "energy_per_capita_GJ": 45.0,
+        "trade_volume_index": 0.20,
+        "urbanization_rate": 0.49
+      },
+      "K_proxies": {
+        "top_1_percent_land_share": 0.01,
+        "senatorial_wealth_share": 0.20,
+        "tax_regressivity_index": 0.45,
+        "rent_sector_dominance": 0.15
+      },
+      "C_proxies": {
+        "public_buildings_share": 0.50,
+        "generalized_trust_proxy": 0.45,
+        "social_mobility_index": 0.50,
+        "infrastructure_investment_share": 0.45
+      }
+    },
+    {
+      "year": 1975,
+      "label": "Brezhnev Stagnation",
+      "T_proxies": {
+        "energy_per_capita_GJ": 65.0,
+        "trade_volume_index": 0.35,
+        "urbanization_rate": 0.62
+      },
+      "K_proxies": {
+        "top_1_percent_land_share": 0.01,
+        "senatorial_wealth_share": 0.40,
+        "tax_regressivity_index": 0.55,
+        "rent_sector_dominance": 0.60
+      },
+      "C_proxies": {
+        "public_buildings_share": 0.30,
+        "generalized_trust_proxy": 0.20,
+        "social_mobility_index": 0.20,
+        "infrastructure_investment_share": 0.25
+      }
+    },
+    {
+      "year": 1985,
+      "label": "Early Perestroika",
+      "T_proxies": {
+        "energy_per_capita_GJ": 70.0,
+        "trade_volume_index": 0.40,
+        "urbanization_rate": 0.65
+      },
+      "K_proxies": {
+        "top_1_percent_land_share": 0.01,
+        "senatorial_wealth_share": 0.55,
+        "tax_regressivity_index": 0.65,
+        "rent_sector_dominance": 0.70
+      },
+      "C_proxies": {
+        "public_buildings_share": 0.20,
+        "generalized_trust_proxy": 0.15,
+        "social_mobility_index": 0.15,
+        "infrastructure_investment_share": 0.18
+      }
+    },
+    {
+      "year": 1991,
+      "label": "Collapse",
+      "T_proxies": {
+        "energy_per_capita_GJ": 35.0,
+        "trade_volume_index": 0.15,
+        "urbanization_rate": 0.66
+      },
+      "K_proxies": {
+        "top_1_percent_land_share": 0.20,
+        "senatorial_wealth_share": 0.70,
+        "tax_regressivity_index": 0.80,
+        "rent_sector_dominance": 0.85
+      },
+      "C_proxies": {
+        "public_buildings_share": 0.05,
+        "generalized_trust_proxy": 0.05,
+        "social_mobility_index": 0.05,
+        "infrastructure_investment_share": 0.05
+      }
+    }
+  ],
+  "data_sources": {
+    "energy_per_capita_GJ": "Smil (2017); Nove (1992) Soviet economic performance; CIA World Factbook historical archives",
+    "trade_volume_index": "Gregory & Stuart (2001) Russian and Soviet economic history; CMEA trade statistics",
+    "urbanization_rate": "Goskomstat census data; Andrusz et al. (1996) Cities after socialism",
+    "top_1_percent_land_share": "Land nationalized post-1917; proxy derived from dacha plot distribution and agricultural reform timing",
+    "senatorial_wealth_share": "Nomenklatura privilege index from Voslensky (1984) Nomenklatura; Matthews (1978) Privilege in the Soviet Union",
+    "tax_regressivity_index": "Turnover tax vs income tax structure; Nove (1992)",
+    "rent_sector_dominance": "Gaddy & Ickes (2013) Russia's addiction to oil and gas rents; share of hard currency from resource exports",
+    "public_buildings_share": "State budget allocation to housing, education, healthcare vs defense and administration",
+    "generalized_trust_proxy": "Ledeneva (1998) Russia's economy of favours; Shlapentokh (1989) public and private life",
+    "social_mobility_index": "Fitzpatrick (1979) Education and social mobility in USSR; Matthews (1978)",
+    "infrastructure_investment_share": "Gosplan investment priorities; Dienes et al. (1994) Soviet transportation system"
+  }
+}

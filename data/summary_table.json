@@ -1,0 +1,135 @@
+{
+    "description": "Summary table of civilizations. For Rome, USSR, Russia, USA: T/K/C computed from proxies. For others: expert estimates based on qualitative historical analysis, marked with 'expert_estimate': true.",
+    "civilizations": [
+        {
+            "name": "Shumer",
+            "period": "3000–2000 BCE",
+            "T_peak": 0.20,
+            "K_peak": 0.65,
+            "K_crit_at_T_peak": 0.55,
+            "K_exceeded": true,
+            "outcome": "Collapse",
+            "expert_estimate": true
+        },
+        {
+            "name": "Egypt (Old Kingdom)",
+            "period": "2700–2180 BCE",
+            "T_peak": 0.25,
+            "K_peak": 0.55,
+            "K_crit_at_T_peak": 0.53,
+            "K_exceeded": true,
+            "outcome": "Decline",
+            "expert_estimate": true
+        },
+        {
+            "name": "Mycenaean Greece",
+            "period": "1600–1200 BCE",
+            "T_peak": 0.22,
+            "K_peak": 0.75,
+            "K_crit_at_T_peak": 0.54,
+            "K_exceeded": true,
+            "outcome": "Collapse",
+            "expert_estimate": true
+        },
+        {
+            "name": "Roman Empire",
+            "period": "27 BCE – 476 CE",
+            "T_peak": 0.35,
+            "K_peak": 0.80,
+            "K_crit_at_T_peak": 0.48,
+            "K_exceeded": true,
+            "outcome": "Collapse",
+            "expert_estimate": false
+        },
+        {
+            "name": "Maya (Classic)",
+            "period": "250–900 CE",
+            "T_peak": 0.30,
+            "K_peak": 0.78,
+            "K_crit_at_T_peak": 0.50,
+            "K_exceeded": true,
+            "outcome": "Collapse",
+            "expert_estimate": true
+        },
+        {
+            "name": "Han China",
+            "period": "202 BCE – 220 CE",
+            "T_peak": 0.28,
+            "K_peak": 0.72,
+            "K_crit_at_T_peak": 0.51,
+            "K_exceeded": true,
+            "outcome": "Collapse",
+            "expert_estimate": true
+        },
+        {
+            "name": "Tang China",
+            "period": "618–907 CE",
+            "T_peak": 0.32,
+            "K_peak": 0.65,
+            "K_crit_at_T_peak": 0.49,
+            "K_exceeded": true,
+            "outcome": "Decline",
+            "expert_estimate": true
+        },
+        {
+            "name": "Byzantium",
+            "period": "330–1204 CE",
+            "T_peak": 0.30,
+            "K_peak": 0.60,
+            "K_crit_at_T_peak": 0.50,
+            "K_exceeded": true,
+            "outcome": "Slow Decline",
+            "expert_estimate": true
+        },
+        {
+            "name": "USSR",
+            "period": "1922–1991",
+            "T_peak": 0.55,
+            "K_peak": 0.70,
+            "K_crit_at_T_peak": 0.38,
+            "K_exceeded": true,
+            "outcome": "Collapse",
+            "expert_estimate": false
+        },
+        {
+            "name": "Venezuela",
+            "period": "1999–2024",
+            "T_peak": 0.50,
+            "K_peak": 0.85,
+            "K_crit_at_T_peak": 0.40,
+            "K_exceeded": true,
+            "outcome": "Collapse",
+            "expert_estimate": true
+        },
+        {
+            "name": "Russia",
+            "period": "2024 (current)",
+            "T_peak": 0.23,
+            "K_peak": 0.85,
+            "K_crit_at_T_peak": 0.49,
+            "K_exceeded": true,
+            "outcome": "TRAPPED",
+            "expert_estimate": false
+        },
+        {
+            "name": "USA",
+            "period": "2024 (current)",
+            "T_peak": 0.80,
+            "K_peak": 0.42,
+            "K_crit_at_T_peak": 0.30,
+            "K_exceeded": true,
+            "outcome": "AT RISK",
+            "expert_estimate": false
+        },
+        {
+            "name": "EU",
+            "period": "2024 (current)",
+            "T_peak": 0.75,
+            "K_peak": 0.30,
+            "K_crit_at_T_peak": 0.32,
+            "K_exceeded": false,
+            "outcome": "Stable",
+            "expert_estimate": true
+        }
+    ]
+}

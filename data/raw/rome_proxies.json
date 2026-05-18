@@ -1,0 +1,148 @@
+{
+    "civilization": "Roman Empire",
+    "period": {
+        "start": -100,
+        "end": 476
+    },
+    "data_points": [
+        {
+            "year": -50,
+            "label": "Late Republic",
+            "T_proxies": {
+                "energy_per_capita_GJ": 15.0,
+                "trade_volume_index": 0.65,
+                "urbanization_rate": 0.15
+            },
+            "K_proxies": {
+                "top_1_percent_land_share": 0.20,
+                "senatorial_wealth_share": 0.25,
+                "tax_regressivity_index": 0.30,
+                "rent_sector_dominance": 0.35
+            },
+            "C_proxies": {
+                "public_buildings_share": 0.45,
+                "generalized_trust_proxy": 0.50,
+                "social_mobility_index": 0.40,
+                "infrastructure_investment_share": 0.35
+            }
+        },
+        {
+            "year": 50,
+            "label": "Early Empire (Augustus)",
+            "T_proxies": {
+                "energy_per_capita_GJ": 18.0,
+                "trade_volume_index": 0.72,
+                "urbanization_rate": 0.18
+            },
+            "K_proxies": {
+                "top_1_percent_land_share": 0.30,
+                "senatorial_wealth_share": 0.35,
+                "tax_regressivity_index": 0.40,
+                "rent_sector_dominance": 0.40
+            },
+            "C_proxies": {
+                "public_buildings_share": 0.40,
+                "generalized_trust_proxy": 0.45,
+                "social_mobility_index": 0.35,
+                "infrastructure_investment_share": 0.38
+            }
+        },
+        {
+            "year": 100,
+            "label": "High Empire (Trajan)",
+            "T_proxies": {
+                "energy_per_capita_GJ": 20.0,
+                "trade_volume_index": 0.80,
+                "urbanization_rate": 0.22
+            },
+            "K_proxies": {
+                "top_1_percent_land_share": 0.45,
+                "senatorial_wealth_share": 0.50,
+                "tax_regressivity_index": 0.55,
+                "rent_sector_dominance": 0.50
+            },
+            "C_proxies": {
+                "public_buildings_share": 0.35,
+                "generalized_trust_proxy": 0.40,
+                "social_mobility_index": 0.30,
+                "infrastructure_investment_share": 0.33
+            }
+        },
+        {
+            "year": 200,
+            "label": "Severan Dynasty",
+            "T_proxies": {
+                "energy_per_capita_GJ": 17.0,
+                "trade_volume_index": 0.55,
+                "urbanization_rate": 0.19
+            },
+            "K_proxies": {
+                "top_1_percent_land_share": 0.60,
+                "senatorial_wealth_share": 0.65,
+                "tax_regressivity_index": 0.70,
+                "rent_sector_dominance": 0.65
+            },
+            "C_proxies": {
+                "public_buildings_share": 0.25,
+                "generalized_trust_proxy": 0.30,
+                "social_mobility_index": 0.20,
+                "infrastructure_investment_share": 0.22
+            }
+        },
+        {
+            "year": 300,
+            "label": "Crisis of the Third Century",
+            "T_proxies": {
+                "energy_per_capita_GJ": 10.0,
+                "trade_volume_index": 0.28,
+                "urbanization_rate": 0.10
+            },
+            "K_proxies": {
+                "top_1_percent_land_share": 0.75,
+                "senatorial_wealth_share": 0.78,
+                "tax_regressivity_index": 0.82,
+                "rent_sector_dominance": 0.80
+            },
+            "C_proxies": {
+                "public_buildings_share": 0.12,
+                "generalized_trust_proxy": 0.15,
+                "social_mobility_index": 0.10,
+                "infrastructure_investment_share": 0.10
+            }
+        },
+        {
+            "year": 400,
+            "label": "Late Empire (pre-collapse)",
+            "T_proxies": {
+                "energy_per_capita_GJ": 5.0,
+                "trade_volume_index": 0.10,
+                "urbanization_rate": 0.05
+            },
+            "K_proxies": {
+                "top_1_percent_land_share": 0.85,
+                "senatorial_wealth_share": 0.88,
+                "tax_regressivity_index": 0.90,
+                "rent_sector_dominance": 0.90
+            },
+            "C_proxies": {
+                "public_buildings_share": 0.05,
+                "generalized_trust_proxy": 0.05,
+                "social_mobility_index": 0.03,
+                "infrastructure_investment_share": 0.04
+            }
+        }
+    ],
+    "data_sources": {
+        "energy_per_capita_GJ": "Smil (2017) Energy and Civilization; Morris (2010) social development index; Scheidel & Friesen (2009) GDP estimates",
+        "trade_volume_index": "Parker (1992) shipwreck data; Temin (2013) Roman market economy; ratio of peak Mediterranean wrecks",
+        "urbanization_rate": "Hanson & Ortman (2017) urban population estimates; Bowman & Wilson (2011) settlement patterns",
+        "top_1_percent_land_share": "Duncan-Jones (1990) Structure and Scale; Scheidel (2017) Great Leveler; Pliny NH 18.35 land concentration",
+        "senatorial_wealth_share": "Duncan-Jones (1982) Roman economy quantification; Scheidel (2019) Escape from Rome",
+        "tax_regressivity_index": "Hopkins (1980) Taxes and Trade; Bang (2007) Roman bazaar; ratio of indirect to direct taxes",
+        "rent_sector_dominance": "Kehoe (2007) Law and Rural Economy; Finley (1973) Ancient Economy; % wealth from land vs commerce",
+        "public_buildings_share": "Patterson (2000) ratio public/private monuments; Lendon (1997) Empire of Honour",
+        "generalized_trust_proxy": "Norena (2011) Imperial Ideals; Ando (2000) Imperial Ideology; coinage as propaganda",
+        "social_mobility_index": "Hopkins (1983) Death and Renewal; MacMullen (1974) social mobility frequency",
+        "infrastructure_investment_share": "Duncan-Jones (1990) public expenditure; Kolb (2002) Transport and Communication"
+    }
+}

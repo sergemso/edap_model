@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Strebulaev
+    given-names: Sergey A.
+    orcid: "https://orcid.org/0009-0006-2710-8910"
+title: "EDAP Model v4.0: Endogenous Dissipation of Adaptive Potential"
+version: 4.0.0
+date-released: 2026-05-26
+url: "https://github.com/sergemso/edap_model"
+repository-code: "https://github.com/sergemso/edap_model"
+license: CC-BY-4.0
+keywords:
+  - "civilization dynamics"
+  - "Fermi paradox"
+  - "Great Filter"
+  - "mathematical modeling"
+  - "cliodynamics"
+  - "nonlinear dynamics"
