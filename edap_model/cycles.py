@@ -28,7 +28,7 @@ class CycleManager:
         self.rng_state = seed
 
     def apply_decay(self):
-        self.recovery_potential *= self.decay_factor
+        self.recovery_potential = round(self.recovery_potential * self.decay_factor, 10)
         if self.recovery_potential < 0.01:
             self.recovery_potential = 0.01
 

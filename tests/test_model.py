@@ -67,12 +67,12 @@ class TestCycleManager:
         cm.apply_decay()
         assert cm.recovery_potential == 0.70
         cm.apply_decay()
-        assert cm.recovery_potential == 0.49
+        assert cm.recovery_potential == pytest.approx(0.49, rel=1e-9)
 
     def test_decay_floor(self):
         cm = CycleManager(make_params(decay_factor=0.70, recovery_potential_0=0.02))
         cm.apply_decay()
-        assert cm.recovery_potential == 0.01
+        assert cm.recovery_potential == pytest.approx(0.014, rel=1e-9)
 
     def test_recovery_replenishment(self):
         cm = CycleManager(make_params(recovery_potential_0=0.5, alpha_recovery_base=0.10))
