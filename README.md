@@ -86,7 +86,7 @@ If you use this model or data in your research, please cite:
   title        = {EDAP Model v4.0: Endogenous Dissipation of Adaptive Potential},
   year         = {2026},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.XXXXXXX},
+  doi          = {10.5281/zenodo.20298963},
   url          = {https://github.com/sergemso/edap_model}
 }
 ```

@@ -23,8 +23,9 @@ jobs:
       
       - name: Bump version in files
         run: |
-          sed -i "s|Version [0-9]\+\.[0-9]\+\.[0-9]\+|Version ${{ env.VERSION }}|g" paper/article.tex
-          sed -i "s|version: [0-9]\+\.[0-9]\+\.[0-9]\+|version: ${{ env.VERSION }}|g" CITATION.cff
+          sed -i "s|^\\date{.*}$|\\date{$(date +%B) $(date +%Y)}|g" paper/article.tex
+          sed -i "s|^version: .\+$|version: ${{ env.VERSION }}|g" CITATION.cff
+          sed -i "s|^date-released: .\+$|date-released: $(date +%Y-%m-%d)|g" CITATION.cff
           sed -i "s|\"version\": \"[0-9]\+\.[0-9]\+\.[0-9]\+\"|\"version\": \"${{ env.VERSION }}\"|g" .zenodo.json
           sed -i "s|EDAP Model v[0-9]\+\.[0-9]\+\.[0-9]\+|EDAP Model v${{ env.VERSION }}|g" edap_model/model.py
       
