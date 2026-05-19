@@ -54,7 +54,6 @@ jobs:
         working-directory: paper/
         run: |
           pdflatex -interaction=nonstopmode -halt-on-error article.tex
-          bibtex article
           pdflatex -interaction=nonstopmode -halt-on-error article.tex
           pdflatex -interaction=nonstopmode -halt-on-error article.tex 
 
