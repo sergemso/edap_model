@@ -1,8 +1,5 @@
-numpy==2.4.5
-scipy==1.17.1
-matplotlib==3.10.9
-seaborn==0.13.2
-numba==0.65.1
-pytest==9.0.3
-jax==0.10.0
-jaxlib==0.10.0
+numpy>=2.4.5
+scipy>=1.17.1
+matplotlib>=3.10.9
+numba>=0.65.1
+pytest>=9.0.3
