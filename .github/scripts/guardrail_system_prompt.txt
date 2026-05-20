@@ -23,6 +23,13 @@ GUARDRAILS:
 
 ===
 
+THESES (ground truth claims):
+{theses}
+
+If the SECTION TEXT contradicts THESES, report it as "inconsistent_with_theses".
+
+===
+
 NUMERICAL RESULTS:
 {civ_metrics}
 
@@ -32,7 +39,7 @@ Respond with JSON only:
 {{
     "violations": [
         {{
-            "type": "prohibited_claim | missing_caveat | tone | inconsistent_number",
+            "type": "prohibited_claim | missing_caveat | tone | inconsistent_number | inconsistent_with_theses",
             "severity": "critical | minor",
             "quote": "exact quote from article",
             "fix": "how to fix"

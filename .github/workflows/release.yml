@@ -194,6 +194,7 @@ jobs:
             ${{ matrix.section }} \
             paper/sections/ \
             GUARDRAILS.md \
+            THESES.md \
             output/results.json
 
       - name: Aggregate guardrail results

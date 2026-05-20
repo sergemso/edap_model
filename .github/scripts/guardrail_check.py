@@ -81,30 +81,32 @@ def load_text(path):
         return f.read()
 
 
-def build_prompt(section_name, section_text, guardrails_text, results_json):
-    template = load_text(SCRIPT_DIR / 'guardrail_system_prompt.txt')
-    metrics_summary = results_json.get('metrics_summary', {})
-    civs = results_json.get('civilizations', {})
+def build_prompt(
+    section_name, section_text, guardrails_text, theses_text, results_json
+):
+    template = load_text(SCRIPT_DIR / "guardrail_system_prompt.txt")
+    metrics_summary = results_json.get("metrics_summary", {})
+    civs = results_json.get("civilizations", {})
 
     civ_metrics = {}
     for name, civ in civs.items():
-        wm = civ.get('working_metrics', {})
+        wm = civ.get("working_metrics", {})
         civ_metrics[name] = {
-            'turn_accuracy': wm.get('turn_accuracy'),
-            'brier_skill_score': wm.get('brier_skill_score'),
-            'role': civ.get('role'),
+            "turn_accuracy": wm.get("turn_accuracy"),
+            "brier_skill_score": wm.get("brier_skill_score"),
+            "role": civ.get("role"),
         }
 
     return template.format(
         section_name=section_name,
         section_text=section_text,
-        guardrails=guardrails_text[:8000],
-        train_ta=metrics_summary.get('train', {}).get('avg_turn_accuracy', 'N/A'),
-        test_ta=metrics_summary.get('test', {}).get('avg_turn_accuracy', 'N/A'),
+        guardrails=guardrails_text,
+        theses=theses_text,
         civ_metrics=json.dumps(civ_metrics, indent=2),
     )
 
-def run_check(section_name, section_text, guardrails_text, results_json):
+
+def run_check(section_name, section_text, guardrails_text, theses_text, results_json):
     github_token = os.environ.get("GITHUB_TOKEN")
     if not github_token:
         print("ERROR: GITHUB_TOKEN not set.")
@@ -113,7 +115,7 @@ def run_check(section_name, section_text, guardrails_text, results_json):
     config = load_json(SCRIPT_DIR / "guardrail_models.json")
 
     system_prompt = build_prompt(
-        section_name, section_text, guardrails_text, results_json
+        section_name, section_text, guardrails_text, theses_text, results_json
     )
     messages = [
         ("system", system_prompt),
@@ -143,10 +145,7 @@ def run_check(section_name, section_text, guardrails_text, results_json):
             print(f"  [{section_name}] Verdict: {check['verdict']}")
             if check.get("violations"):
                 print(f"  [{section_name}] VIOLATIONS ({len(check['violations'])}):")
-                for v in check["violations"]:
-                    print(
-                        f"    [{v['severity']}] {v['type']}: {v.get('quote', 'N/A')}"
-                    )
+                print(json.dumps(check["violations"], indent=2, ensure_ascii=False))
 
             if check["verdict"] == "fail":
                 print(f"\nERROR: Section {section_name} violates guardrails.")
@@ -154,7 +153,9 @@ def run_check(section_name, section_text, guardrails_text, results_json):
 
             cache_dir = Path(".guardrail-cache")
             cache_dir.mkdir(exist_ok=True)
-            (cache_dir / f"{section_name}.json").write_text(json.dumps(check, indent=2))
+            (cache_dir / f"{section_name}.json").write_text(
+                json.dumps(check, indent=2, ensure_ascii=False)
+            )
             return True
 
         except Exception as e:
@@ -168,21 +169,21 @@ def run_check(section_name, section_text, guardrails_text, results_json):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 6:
         print(
-            "Usage: guardrail_check.py <section_name> <sections_dir> <guardrails_file> <results_json>"
+            "Usage: guardrail_check.py <section_name> <sections_dir> <guardrails_file> <theses_file> <results_json>"
         )
         sys.exit(1)
 
     section_name = sys.argv[1]
     sections_dir = Path(sys.argv[2])
     guardrails = load_text(sys.argv[3])
-    results = load_json(sys.argv[4])
-
+    theses = load_text(sys.argv[4])
+    results = load_json(sys.argv[5])
     section_path = sections_dir / f"{section_name}.tex"
     if not section_path.exists():
         print(f"ERROR: Section file not found: {section_path}")
         sys.exit(1)
 
     section_text = strip_latex(load_text(section_path))
-    run_check(section_name, section_text, guardrails, results)
+    run_check(section_name, section_text, guardrails, theses, results)
