@@ -52,7 +52,7 @@ def load_text(path):
 
 def build_system_prompt(guardrails_text, results_json):
     """Build prompt from template + data."""
-    template = load_text(SCRIPT_DIR / "guardrail_system.txt")
+    template = load_text(SCRIPT_DIR / "guardrail_system_prompt.txt")
     metrics_summary = results_json.get("metrics_summary", {})
     civs = results_json.get("civilizations", {})
 
