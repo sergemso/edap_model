@@ -64,7 +64,7 @@ jobs:
       
       - name: Guardrail and consistency check
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python .github/scripts/guardrail_check.py \
             paper/article.tex \
