@@ -10,7 +10,7 @@ permissions:
   models: read
 
 jobs:
-  validate-and-publish:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -66,40 +66,6 @@ jobs:
         run: |
           ! grep -r "XXXXXXX" paper/ CITATION.cff .zenodo.json README.md && echo "OK: No placeholders" || (echo "ERROR: Placeholder XXXXXXX found" && exit 1)
 
-      - name: Restore guardrail cache
-        uses: actions/cache@v4
-        with:
-          path: .guardrail-cache
-          key: guardrail-${{ matrix.section }}-${{ hashFiles(format('paper/sections/{0}.tex', matrix.section)) }}-${{ hashFiles('GUARDRAILS.md') }}-${{ hashFiles('.github/scripts/guardrail_system_prompt.txt') }}
-          restore-keys: guardrail-${{ matrix.section }}-
-
-      - name: Guardrail check (per section)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python .github/scripts/guardrail_check.py \
-            ${{ matrix.section }} \
-            paper/sections/ \
-            GUARDRAILS.md \
-            output/results.json
-        strategy:
-          matrix:
-            section:
-              - abstract
-              - introduction
-              - model
-              - results
-              - discussion
-              - conclusion
-          fail-fast: false
-
-      - name: Aggregate guardrail results
-        run: |
-          echo "All sections passed guardrail check."
-          for f in .guardrail-cache/*.json; do
-            echo "  $(basename $f .json): $(jq -r .verdict $f)"
-          done
-
       - name: Diff metrics vs previous release
         run: |
           python .github/scripts/diff_metrics.py output/results.json
@@ -150,3 +116,58 @@ jobs:
             output/fig*.png
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  guardrail:
+    needs: build
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        section:
+          - abstract
+          - introduction
+          - model
+          - results
+          - discussion
+          - conclusion
+      fail-fast: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.ci.txt
+
+      - name: Restore guardrail cache
+        uses: actions/cache@v4
+        with:
+          path: .guardrail-cache
+          key: guardrail-${{ matrix.section }}-${{ hashFiles(format('paper/sections/{0}.tex', matrix.section)) }}-${{ hashFiles('GUARDRAILS.md') }}-${{ hashFiles('.github/scripts/guardrail_system_prompt.txt') }}
+          restore-keys: guardrail-${{ matrix.section }}-
+
+      - name: Guardrail check (per section)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python .github/scripts/guardrail_check.py \
+            ${{ matrix.section }} \
+            paper/sections/ \
+            GUARDRAILS.md \
+            output/results.json
+
+      - name: Aggregate guardrail results
+        if: always()
+        run: |
+          echo "Guardrail check results:"
+          for f in .guardrail-cache/*.json; do
+            if [ -f "$f" ]; then
+              echo "  $(basename $f .json): $(jq -r .verdict $f)"
+            fi
+          done
