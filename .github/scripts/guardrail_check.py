@@ -130,6 +130,7 @@ def run_check(section_name, section_text, guardrails_text, results_json):
                 model=model_name,
                 temperature=config["temperature"],
                 max_tokens=config["max_tokens"],
+                model_kwargs={"response_format": {"type": "json_object"}},
             )
             response = llm.invoke(messages)
             content = response.content.strip()

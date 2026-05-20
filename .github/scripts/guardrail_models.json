@@ -1,13 +1,15 @@
 {
   "models": [
-    "Mistral-large",
     "Llama-3.3-70B-Instruct",
-    "Phi-4"
+    "AI21-Jamba-1.5-Large",
+    "Phi-4-reasoning",
+    "Phi-4",
+    "Llama-3.2-90B-Vision-Instruct",
+    "Phi-3.5-MoE-instruct",
+    "Cohere-Command-R-Plus"
   ],
   "temperature": 0.0,
   "max_tokens": 2000,
-  "guardrails_max_chars": 8000,
-  "article_max_chars": 25000,
   "max_consecutive_errors": 3,
   "strip_latex": true
 }
