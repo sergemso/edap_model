@@ -3,7 +3,7 @@ name: Release Pipeline
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 permissions:
   contents: write
@@ -36,7 +36,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Cache pip packages
         uses: actions/cache@v4
@@ -54,14 +54,17 @@ jobs:
           path: /usr/share/texlive
           key: texlive-2024
 
-      - name: Install LaTeX (minimal)
+      - name: Install LaTeX 
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends \
             texlive-latex-base \
             texlive-latex-recommended \
+            texlive-latex-extra \
             texlive-fonts-recommended \
             texlive-fonts-extra \
+            texlive-science \
+            texlive-publishers \
             cm-super
 
       - name: Run tests
@@ -156,7 +159,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Cache pip packages
         uses: actions/cache@v4
