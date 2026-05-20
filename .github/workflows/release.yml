@@ -48,13 +48,13 @@ jobs:
         run: |
           pip install -r requirements.ci.txt
 
-      - name: Cache TeX Live
+      - name: Cache APT packages
         uses: actions/cache@v4
         with:
-          path: /usr/share/texlive
-          key: texlive-2024
+          path: /var/cache/apt/archives
+          key: apt-texlive-${{ runner.os }}-${{ runner.arch }}
 
-      - name: Install LaTeX 
+      - name: Install LaTeX
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq --no-install-recommends \
