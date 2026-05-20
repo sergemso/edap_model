@@ -102,6 +102,12 @@ jobs:
           name: results
           path: output/
 
+      - name: Create release archive
+        run: |
+          git archive -o edap-v${{ env.VERSION }}.zip v${{ env.VERSION }} \
+            -- ':!.github' ':!.zenodo.json' ':!.editorconfig'
+          zip edap-v${{ env.VERSION }}.zip output/results.json paper/article.pdf
+
       - name: Create GitHub Release (draft)
         uses: softprops/action-gh-release@v2
         with:
@@ -120,7 +126,7 @@ jobs:
             - Full source code (Python/Numba CUDA)
             - Proxy data for 4 historical civilizations
             - Compiled paper (PDF)
-            - All figures and numerical results
+            - Numerical results (JSON)
 
             ### Reproducibility
             ```bash
@@ -131,11 +137,7 @@ jobs:
             ### Citation
             See CITATION.cff or Zenodo record.
           files: |
-            paper/article.pdf
-            output/results.json
-            output/fig*.png
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            edap-v${{ env.VERSION }}.zip
 
   guardrail:
     needs: build
