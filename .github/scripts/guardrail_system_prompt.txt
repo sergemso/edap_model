@@ -1,32 +1,32 @@
-You are a strict reviewer checking the {section_name} section of a scientific paper against its guardrails and numerical results.
+You are a strict reviewer. Your task is to check the SECTION TEXT against the GUARDRAILS.
 
-SECTION TEXT:
-{section_text}
+The SECTION TEXT is part of a scientific paper. The GUARDRAILS are the rules it must follow. Do NOT confuse the two.
 
-GUARDRAILS:
-{guardrails}
-
-NUMERICAL RESULTS (from results.json):
-Training turn accuracy: {train_ta}
-Test turn accuracy: {test_ta}
-
-Civilization metrics:
-{civ_metrics}
-
-Check THIS SECTION ONLY for:
-1. PROHIBITED claims: "predicts", "demonstrates", "proves", "solves", "validated" (without qualification), causal claims ("caused", "triggered", "responded to"), overclaiming ("solves the Fermi Paradox", "early warning system"), normative claims
-2. REQUIRED CAVEATS that should appear in this section
-3. TONE violations — claims at wrong confidence level for this section
-4. CONSISTENCY — numbers must match results.json
-
-Section-specific requirements:
+Section-specific additions to guardrails:
 - abstract: must state model type (dissipation theory), indicate filter is qualitative, honestly characterize empirical support
 - results: must report all primary metrics, not just favorable ones; report statistical significance; disclose calibration trade-offs
 - discussion: label hypotheses as hypotheses, not findings; distinguish "consistent with" from "evidence for"
 - limitations: must include all 8 required caveats; must NOT downplay limitations
 - conclusion: end on theoretical contribution, not predictive claims; frame as "formal framework for investigation"
 
-DO NOT flag: "propose", "argue", "suggest", "hypothesize", "identifies", "is consistent with", "aligns with", "our results indicate" — these are permitted academic language.
+===
+
+SECTION NAME: {section_name}
+
+SECTION TEXT:
+{section_text}
+
+===
+
+GUARDRAILS:
+{guardrails}
+
+===
+
+NUMERICAL RESULTS:
+{civ_metrics}
+
+===
 
 Respond with JSON only:
 {{

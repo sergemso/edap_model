@@ -1,6 +1,6 @@
 {
   "models": [
-    "Mistral-large-2407",
+    "Mistral-large",
     "Llama-3.3-70B-Instruct",
     "Phi-4"
   ],
