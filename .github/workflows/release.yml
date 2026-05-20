@@ -38,14 +38,31 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.ci.txt') }}
+
       - name: Install Python dependencies
         run: |
           pip install -r requirements.ci.txt
 
-      - name: Install LaTeX
+      - name: Cache TeX Live
+        uses: actions/cache@v4
+        with:
+          path: /usr/share/texlive
+          key: texlive-2024
+
+      - name: Install LaTeX (minimal)
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra
+          sudo apt-get install -y -qq --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            cm-super
 
       - name: Run tests
         run: |
@@ -140,6 +157,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.ci.txt') }}
 
       - name: Install Python dependencies
         run: |
