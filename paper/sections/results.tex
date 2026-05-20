@@ -1,0 +1,60 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Turn Accuracy}
+
+\input{../output/table_turn_accuracy.tex}
+
+The model achieves perfect prediction (TA = 1.0) for the Soviet Union, correctly identifying all five directional changes from post-Civil War recovery through terminal collapse. For the United States, the model predicts 10 of 17 turns (59\%). A binomial test against chance-level prediction (expected accuracy = 0.5 for binary direction) yields $p = 0.31$, indicating that this accuracy does not significantly exceed random guessing. We therefore do not claim predictive power for US turn detection. The result is presented as an observational alignment requiring further validation.
+
+\subsection{Structural Tension Detection}
+
+\input{../output/table_turns_united_states_of_america.tex}
+
+The predicted turning points for the United States correspond to documented historical moments at which elites deployed compensatory mechanisms: the New Deal (1933), Bretton Woods (1945), the petrodollar system (1971), financial deregulation (1980), China trade expansion (2000), quantitative easing (2008), and pandemic fiscal stimulus (2020). We advance the hypothesis---to be tested in future work---that these interventions represent elite responses to structural tension detected by the model, functioning as entropy discharges that temporarily reset the system away from the feudal trap attractor.
+
+We emphasize that this hypothesis is \textbf{not statistically confirmed} by the current analysis. The binomial test above indicates that the model's turn predictions do not significantly outperform chance. The 7 unpredicted turns may equally reflect model error, proxy noise, or the influence of factors outside the model's three-variable scope. We present the compensation hypothesis as a falsifiable proposition requiring forward-looking predictions and out-of-sample testing.
+
+\subsection{Working Metrics}
+
+\input{../output/table_metrics.tex}
+
+The calibrated model achieves high turn accuracy on training data but sacrifices $K$-crossing lead time---a known trade-off discussed in Section~\ref{sec:limitations}. The negative Brier Skill Scores indicate that the model is outperformed by a climatological baseline for binary $K > K_{\text{crit}}$ prediction when calibrated for turn accuracy. This reflects the model's structural conservatism: with low $\alpha_K^{\text{base}}$, $K$ rarely exceeds $K_{\text{crit}}$ in simulation. For a system intended as an early warning mechanism, this is a feature, not a bug: the model is reluctant to signal a crisis without strong evidence. However, this conservatism comes at the cost of sensitivity, and the calibration trade-off between turn accuracy and warning lead time requires explicit multi-objective optimization in future work.
+
+\subsection{Phase Portrait}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.70\textwidth]{../output/fig1_phase_portrait.png}
+\caption{Phase portrait in $(T, K)$ plane. Red dashed: $K_{\text{crit}}(T)$. Blue dash-dot: $K_{\max}(T)$. Gray streamlines: vector field at $C=0.25$. Colored trajectories: historical civilizations (circle = start, cross = final simulated state).}
+\label{fig:phase}
+\end{figure}
+
+\subsection{Bifurcation Analysis}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../output/fig3_bifurcation.png}
+\caption{(A) $\alpha_K^{\text{base}}$ sweep showing bifurcation at $\approx 0.12$. (B) $\delta$ sweep. (C) Phase portraits at three $\alpha_K$ values. (D) Basin stability heatmap.}
+\label{fig:bifurcation}
+\end{figure}
+
+The system bifurcates at $\alpha_K^{\text{base}} \approx 0.12$. Below this threshold, bistability exists between sustainable development and feudal trap attractors. Above it, only the feudal trap remains. The calibrated value of $0.103$ places the model precisely at this transition---consistent with the historical observation that human civilizations oscillate between growth and stagnation regimes.
+
+\subsection{Monte Carlo Forecast}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../output/fig4_monte_carlo.png}
+\caption{Monte Carlo forecasts (1,000 simulations, 90\% CI). Top: Russia. Bottom: USA. Left: $P(K > K_{\text{crit}})$. Right: $P(dT/dt < 0)$.}
+\label{fig:montecarlo}
+\end{figure}
+
+\subsection{Civilizational Risk Assessment}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../output/fig5_summary_table.png}
+\caption{Civilizational risk assessment: actual $K$ vs.\ $K_{\text{crit}}$ at peak $T$. Red: $K > K_{\text{crit}}$. Green: $K < K_{\text{crit}}$. Warning symbols indicate current exceedance. Asterisk indicates expert estimates.}
+\label{fig:summary}
+\end{figure}

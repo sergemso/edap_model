@@ -1,0 +1,66 @@
+\section{Model Description}
+
+\subsection{State Variables}
+
+\begin{itemize}
+    \item \textbf{Technology ($T \in [0,1]$):} The fraction of scientifically realizable technologies that a civilization deploys. $T=1$ indicates full utilization of known scientific potential. $T<1$ indicates de-technologization under elite pressure.
+    \item \textbf{Cannibalism ($K \in [0,1]$):} The fraction of societal resources extracted by elites without productive contribution. $K=0$ corresponds to pure meritocracy. $K=1$ represents total extraction.
+    \item \textbf{Cooperation ($C \in [0,1]$):} The capacity for collective action, generalized trust, and institutional effectiveness. $C=0$ is complete atomization. $C=1$ is perfect coordination.
+\end{itemize}
+
+\subsection{System Dynamics}
+
+\begin{align}
+\frac{dT}{dt} &= \alpha_T (T - T_{\min})(1 - T) C \left(1 - \frac{K}{K_{\text{crit}}}\right)
+               - \beta_T (T - T_{\min})
+               - \gamma_T K T
+               + \eta S(t) \left(1 - \frac{T}{T_{\text{peak}}}\right) \label{eq:dT} \\[4pt]
+\frac{dK}{dt} &= \alpha_K^{\text{eff}} K (1 - T - C) \left(1 - \frac{K}{K_{\max}}\right)
+               - \beta_K (T C) K
+               - \lambda_{\text{shadow}}^{\text{eff}} \max(K - K_{\text{shadow}}, 0) K \label{eq:dK} \\[4pt]
+\frac{dC}{dt} &= \alpha_C (T - K) C (1 - C)
+               + \eta S(t) (1 - C)
+               + \mu_{\text{shadow}}^{\text{eff}} \max(K - K_{\text{shadow}}, 0) (1 - C)
+               - \gamma_C K C \label{eq:dC}
+\end{align}
+
+\subsection{Key Mechanisms}
+
+\textbf{Critical threshold.} The extraction threshold beyond which adaptive dissipation begins:
+\begin{equation}
+K_{\text{crit}}(T) = K_0 - \delta T + \epsilon_{\text{tech}} \max(0, T - T_{\text{sing}})^2
+\label{eq:kcrit}
+\end{equation}
+The linear term captures the increasing fragility of complex societies. The quadratic term represents a technofeudal effect: beyond $T_{\text{sing}}$, automation enables elites to maintain high extraction without immediate collapse. The functional form is chosen as the simplest polynomial satisfying the boundary conditions of a declining threshold that upturns at high technology. Alternative forms (sigmoid, exponential) produce qualitatively similar bifurcation behavior (see Appendix).
+
+\textbf{Cooperation-mediated parasitism.} The effective attractiveness of extraction is modulated by cooperation:
+\begin{equation}
+\alpha_K^{\text{eff}} = \alpha_K^{\text{base}} (1 - C)
+\label{eq:alphak}
+\end{equation}
+In highly cooperative societies, rent-seeking is costlier---dense social networks facilitate coordinated resistance and provide institutional alternatives \cite{olson1965,putnam2000}.
+
+\textbf{Maximum extraction.} Physical limits on extraction depend on the technological base:
+\begin{equation}
+K_{\max}(T) = \begin{cases}
+\kappa \dfrac{T}{T + T_h} & T < T_{\text{auto}} \\[8pt]
+\text{smooth transition to } 1.0 & T \geq T_{\text{auto}}
+\end{cases}
+\label{eq:kmax}
+\end{equation}
+At low $T$, little surplus exists. Beyond automation threshold $T_{\text{auto}}$, elites can extract from machines without relying on human labor. This equation encodes the decoupling of elite welfare from population size that underlies the plateau-to-filter transition.
+
+\textbf{Shadow cooperation.} When formal institutions are captured (high $K$), cooperation migrates to informal networks \cite{de_soto1989}:
+\begin{align}
+\lambda_{\text{shadow}}^{\text{eff}} &= \lambda_{\text{shadow}} \max\left(0, 1 - \frac{T}{T_{\text{auto}}}\right) \\
+\mu_{\text{shadow}}^{\text{eff}} &= \mu_{\text{shadow}} \max\left(0, 1 - \frac{T}{T_{\text{auto}}}\right)
+\end{align}
+The linear attenuation by $T/T_{\text{auto}}$ is the simplest form satisfying the boundary conditions that shadow activity is maximal at low technology and vanishes at full automation. Both effects weaken with advancing surveillance technologies---facial recognition, financial monitoring, algorithmic coordination---making shadow economies increasingly difficult to sustain at high $T$.
+
+\textbf{External shocks.} $S(t)$ follows an Ornstein-Uhlenbeck process with discrete historical events. Parameter $\eta$ controls the cooperative and technological response magnitude.
+
+\textbf{Stabilizers.} Three mechanisms ensure physical plausibility: (i) technological floor $T_{\min}=0.08$ prevents complete de-skilling, (ii) extraction ceiling $K_{\max}(T)$ respects economic capacity, (iii) gradient clipping at $[0.01, 0.99]$ for $K$ and $C$.
+
+\subsection{Parameters}
+
+(see Appendix, Table~\ref{tab:params})

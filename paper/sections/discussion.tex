@@ -1,0 +1,41 @@
+\section{Discussion}
+
+\subsection{A Theory of Dissipation}
+
+The EDAP model is a theory of dissipation, not of growth. It identifies when the conditions for technological regression are present but does not predict when growth will occur. This is a boundary condition, not a flaw: the model explains the ``default'' trajectory toward the feudal trap, against which growth represents a temporary deviation requiring exogenous explanation.
+
+\subsection{The Great Plateau}
+
+In its current form, the model explains the \emph{Great Plateau}---the absence of interstellar expansion. A civilization in the feudal trap ($T \approx 0.1$, $K \approx 0.45$, $C \approx 0.01$) retains basic technology and population. It does not build starships. It does not colonize other star systems. It persists, indefinitely, on its home planet, its resources consumed by internal extraction rather than directed toward exploration.
+
+This resolves one component of the Fermi Paradox: the absence of galactic colonization. But it does not resolve the absence of \emph{detectable technosignatures} from stagnant civilizations. A planet with $T \approx 0.1$ may still produce industrial gases, thermal signatures, and electromagnetic emissions observable across interstellar distances.
+
+\subsection{Historical Precedent: The Post-Roman Dark Ages}
+
+The post-Roman Dark Ages (c.\ 500--1000 CE) provide a well-documented example of the feudal trap attractor. Following the dissolution of Western Roman imperial institutions, Europe experienced: (i) technological regression, including the loss of concrete production, monumental architecture, and long-distance trade networks \cite{wardperkins2005}; (ii) extreme political fragmentation, with extraction decentralized to local lords operating within a manorial economy \cite{wickham2009}; and (iii) collapse of formal cooperation, as imperial law and administration were replaced by personal oaths of fealty and kinship-based dispute resolution \cite{mccormick2001}. Population declined, literacy contracted, and urban centers depopulated.
+
+Recovery began only in the tenth and eleventh centuries with the reintroduction of institutional cooperation through the Church, the rise of autonomous cities, and the rediscovery of Roman law---exogenous shocks in the model's terms, corresponding to a temporary increase in $C$ and decrease in effective $\alpha_K$ through new institutional constraints on elite extraction. This case is consistent with the model's prediction that escape from the feudal trap requires external intervention; the trap itself is the default attractor.
+
+\subsection{From Plateau to Filter: The Technofeudal Threshold}
+
+The transition from plateau to filter is suggested by the model's structure at $T_{\text{sing}}$, but we emphasize that this is a qualitative implication, not a quantitative prediction verified by simulation. Equation~\eqref{eq:kmax} specifies that $K_{\max}(T) \rightarrow 1.0$ as $T$ exceeds $T_{\text{auto}}$. The elite class no longer requires a human population base. The shadow cooperation that sustained minimal societal function is suppressed by pervasive surveillance (Equations~6--7).
+
+A civilization crossing $T_{\text{sing}}$ with $K > K_{\text{crit}}$ may undergo \emph{filtration}: population collapse, technological simplification below the threshold of astronomical detectability, and permanent disappearance from the observable universe. The Great Plateau becomes the Great Filter. \textbf{However, the current model does not contain population dynamics, technosignature strength, or astronomical detectability variables.} Establishing this transition as a robust mechanism requires extending the model with these components and calibrating the extended system against historical or simulated data. We present the plateau-to-filter hypothesis as a theoretically motivated conjecture that follows from the model's structure and merits dedicated investigation.
+
+\subsection{Compensation Hypothesis}
+
+For the United States, the model identifies structural tension points that align with documented compensatory interventions. We formulate this as a falsifiable hypothesis: if elite interventions function as entropy discharges that temporarily reset the trajectory away from the feudal trap, then the exhaustion of compensatory capacity should produce observable $T$ decline consistent with the model's structural prediction. We note that the binomial test for US turn accuracy ($p = 0.31$) does not provide statistical support for this hypothesis in its current form; the alignment may be coincidental.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Aggregated elites.} The model treats elites as a monolithic entity. Elite faction competition can amplify or restrain extraction and is not captured \cite{acemoglu2012,turchin2016}.
+    \item \textbf{Calibration trade-off.} Optimizing for turn accuracy sacrifices $K$-crossing lead time. Multi-objective calibration addressing both objectives simultaneously is needed.
+    \item \textbf{Small calibration sample.} Two training civilizations with twelve data points for six free parameters create a risk of overfitting. Parameter estimates are existence proofs, not definitive values.
+    \item \textbf{Proxy uncertainty.} Historical proxy data involve substantial measurement error, particularly for ancient civilizations. Sensitivity to proxy assumptions has not been quantified.
+    \item \textbf{No spatial or inter-civilizational dynamics.} The model treats civilizations as isolated and homogeneous. Spatial heterogeneity and external competition are important drivers of both cooperation and extraction.
+    \item \textbf{Filter transition not verified.} The plateau-to-filter mechanism via $T_{\text{sing}}$ is a qualitative implication of the model's structure. The current model does not simulate population, technosignatures, or detectability. Dedicated modeling of these variables is required.
+    \item \textbf{Statistical power.} The binomial test for US turn accuracy ($p = 0.31$) indicates that the model's directional predictions do not significantly outperform chance on the test set. Larger samples and forward-looking predictions are needed for robust validation.
+    \item \textbf{Functional form sensitivity.} Key functional forms ($K_{\text{crit}}$ quadratic upturn, linear shadow attenuation) were chosen as the simplest satisfying boundary conditions. Systematic sensitivity analysis to alternative forms is deferred to future work.
+\end{enumerate}

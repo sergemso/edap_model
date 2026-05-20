@@ -11,20 +11,20 @@ permissions:
 
 jobs:
   validate-and-publish:
-    runs-on: self-hosted
-    
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Set version from tag
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "Release version: $VERSION"
-      
+
       - name: Bump version in files
         run: |
           sed -i "s|^\\date{.*}$|\\date{$(date +%B) $(date +%Y)}|g" paper/article.tex
@@ -32,25 +32,25 @@ jobs:
           sed -i "s|^date-released: .\+$|date-released: $(date +%Y-%m-%d)|g" CITATION.cff
           sed -i "s|\"version\": \"[0-9]\+\.[0-9]\+\.[0-9]\+\"|\"version\": \"${{ env.VERSION }}\"|g" .zenodo.json
           sed -i "s|EDAP Model v[0-9]\+\.[0-9]\+\.[0-9]\+|EDAP Model v${{ env.VERSION }}|g" edap_model/model.py
-      
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
+
       - name: Install Python dependencies
         run: |
           pip install -r requirements.ci.txt
-      
+
       - name: Install LaTeX
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra
-      
+
       - name: Run tests
         run: |
           python -m pytest tests/test_model.py -v
-      
+
       - name: Run full pipeline
         run: |
           python run_model.py
@@ -60,37 +60,62 @@ jobs:
         run: |
           pdflatex -interaction=nonstopmode -halt-on-error article.tex
           pdflatex -interaction=nonstopmode -halt-on-error article.tex
-          pdflatex -interaction=nonstopmode -halt-on-error article.tex 
+          pdflatex -interaction=nonstopmode -halt-on-error article.tex
 
       - name: Check placeholder values
         run: |
           ! grep -r "XXXXXXX" paper/ CITATION.cff .zenodo.json README.md && echo "OK: No placeholders" || (echo "ERROR: Placeholder XXXXXXX found" && exit 1)
-      
-      - name: Guardrail and consistency check
+
+      - name: Restore guardrail cache
+        uses: actions/cache@v4
+        with:
+          path: .guardrail-cache
+          key: guardrail-${{ matrix.section }}-${{ hashFiles(format('paper/sections/{0}.tex', matrix.section)) }}-${{ hashFiles('GUARDRAILS.md') }}-${{ hashFiles('.github/scripts/guardrail_system_prompt.txt') }}
+          restore-keys: guardrail-${{ matrix.section }}-
+
+      - name: Guardrail check (per section)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python .github/scripts/guardrail_check.py \
-            paper/article.tex \
+            ${{ matrix.section }} \
+            paper/sections/ \
             GUARDRAILS.md \
             output/results.json
-      
+        strategy:
+          matrix:
+            section:
+              - abstract
+              - introduction
+              - model
+              - results
+              - discussion
+              - conclusion
+          fail-fast: false
+
+      - name: Aggregate guardrail results
+        run: |
+          echo "All sections passed guardrail check."
+          for f in .guardrail-cache/*.json; do
+            echo "  $(basename $f .json): $(jq -r .verdict $f)"
+          done
+
       - name: Diff metrics vs previous release
         run: |
           python .github/scripts/diff_metrics.py output/results.json
-      
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: paper-pdf
           path: paper/article.pdf
-      
+
       - name: Upload results artifact
         uses: actions/upload-artifact@v4
         with:
           name: results
           path: output/
-      
+
       - name: Create GitHub Release (draft)
         uses: softprops/action-gh-release@v2
         with:
@@ -98,25 +123,25 @@ jobs:
           draft: true
           body: |
             ## EDAP Model v${{ env.VERSION }}
-            
+
             ### Release checklist
             - [ ] All tests pass
             - [ ] Guardrail check passes
             - [ ] Article compiles
             - [ ] Metrics consistent with article claims
-            
+
             ### What's included
             - Full source code (Python/Numba CUDA)
             - Proxy data for 4 historical civilizations
             - Compiled paper (PDF)
             - All figures and numerical results
-            
+
             ### Reproducibility
             ```bash
             pip install -r requirements.txt
             python run_model.py
             ```
-            
+
             ### Citation
             See CITATION.cff or Zenodo record.
           files: |

@@ -37,8 +37,18 @@ edap_model/
 │       ├── guardrail_models.json        # model list
 │       ├── guardrail_system_prompt.txt  # system prompt template
 │       └── diff_metrics.py              # Compare metrics with previous release
+# INDEX.md — добавить в Directory Structure
 ├── paper/
-│   └── article.tex                      # LaTeX paper (v4.0 final)
+│   ├── article.tex                      # Skeleton: preamble + \input{sections/...}
+│   └── sections/
+│       ├── abstract.tex                 # Abstract section
+│       ├── introduction.tex             # Introduction + subsections
+│       ├── model.tex                    # Model Description + equations
+│       ├── results.tex                  # Results + figures + tables
+│       ├── discussion.tex               # Discussion + Limitations
+│       ├── conclusion.tex               # Conclusion
+│       ├── appendix.tex                 # Parameter table
+│       └── bibliography.tex             # References (the bibliography)
 ├── edap_model/
 │   ├── __init__.py                      # Package init, re-exports key classes
 │   ├── model.py                         # EDAPModel class — ODE system, simulation

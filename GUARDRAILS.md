@@ -175,3 +175,4 @@ The following must appear somewhere in every paper. Not all in the abstract — 
 - `ADR.md` — Architecture Decision Records (why decisions were made)
 - `INDEX.md` — Project file map (for AI/RAG systems)
 - `README.md` — Human-facing project overview
+- `paper/sections/` — Article source, split into 8 independent sections for modular editing and section-specific guardrail checks

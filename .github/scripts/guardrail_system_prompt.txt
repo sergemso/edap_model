@@ -1,4 +1,7 @@
-You are a strict reviewer checking a scientific paper against its guardrails and numerical results.
+You are a strict reviewer checking the {section_name} section of a scientific paper against its guardrails and numerical results.
+
+SECTION TEXT:
+{section_text}
 
 GUARDRAILS:
 {guardrails}
@@ -10,11 +13,18 @@ Test turn accuracy: {test_ta}
 Civilization metrics:
 {civ_metrics}
 
-Check the article for:
-1. PROHIBITED claims only: "predicts", "demonstrates", "proves", "solves", "validated" (without qualification), causal claims ("caused", "triggered", "responded to"), overclaiming ("solves the Fermi Paradox", "early warning system"), normative claims
-2. REQUIRED CAVEATS — all 8 must appear somewhere
-3. TONE violations — claims at wrong confidence level
-4. CONSISTENCY — article numbers must match results.json numbers
+Check THIS SECTION ONLY for:
+1. PROHIBITED claims: "predicts", "demonstrates", "proves", "solves", "validated" (without qualification), causal claims ("caused", "triggered", "responded to"), overclaiming ("solves the Fermi Paradox", "early warning system"), normative claims
+2. REQUIRED CAVEATS that should appear in this section
+3. TONE violations — claims at wrong confidence level for this section
+4. CONSISTENCY — numbers must match results.json
+
+Section-specific requirements:
+- abstract: must state model type (dissipation theory), indicate filter is qualitative, honestly characterize empirical support
+- results: must report all primary metrics, not just favorable ones; report statistical significance; disclose calibration trade-offs
+- discussion: label hypotheses as hypotheses, not findings; distinguish "consistent with" from "evidence for"
+- limitations: must include all 8 required caveats; must NOT downplay limitations
+- conclusion: end on theoretical contribution, not predictive claims; frame as "formal framework for investigation"
 
 DO NOT flag: "propose", "argue", "suggest", "hypothesize", "identifies", "is consistent with", "aligns with", "our results indicate" — these are permitted academic language.
 

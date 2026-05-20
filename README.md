@@ -59,6 +59,26 @@ Requires NVIDIA GPU with CUDA for acceleration. Falls back to CPU if unavailable
 python -m pytest tests/test_model.py -v
 ```
 
+## Paper
+
+The paper source is split into sections for modular editing:
+
+```
+paper/
+├── article.tex          # Skeleton with preamble and \input{sections/...}
+└── sections/
+    ├── abstract.tex
+    ├── introduction.tex
+    ├── model.tex
+    ├── results.tex
+    ├── discussion.tex
+    ├── conclusion.tex
+    ├── appendix.tex
+    └── bibliography.tex
+```
+
+Compile: `cd paper/ && pdflatex article.tex` (run three times for cross-references).
+
 ## Requirements
 
 - Python 3.10+
