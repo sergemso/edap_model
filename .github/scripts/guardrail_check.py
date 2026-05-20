@@ -145,7 +145,7 @@ def run_check(section_name, section_text, guardrails_text, results_json):
                 print(f"  [{section_name}] VIOLATIONS ({len(check['violations'])}):")
                 for v in check["violations"]:
                     print(
-                        f"    [{v['severity']}] {v['type']}: {v.get('quote', 'N/A')[:80]}"
+                        f"    [{v['severity']}] {v['type']}: {v.get('quote', 'N/A')}"
                     )
 
             if check["verdict"] == "fail":
