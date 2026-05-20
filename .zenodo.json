@@ -1,26 +1,26 @@
 {
-    "title": "EDAP Model v4.0: Endogenous Dissipation of Adaptive Potential",
-    "description": "A mathematical model of civilization dynamics based on endogenous dissipation of adaptive potential through intraspecific economic cannibalism. Includes GPU-accelerated simulation engine, calibration pipeline, proxy data for four historical civilizations, and LaTeX paper.",
-    "creators": [
-        {
-            "name": "Strebulaev, Sergey A.",
-            "orcid": "0009-0006-2710-8910",
-            "affiliation": "Independent Researcher"
-        }
-    ],
-    "keywords": [
-        "civilization dynamics",
-        "Fermi paradox",
-        "Great Filter",
-        "mathematical modeling",
-        "cliodynamics",
-        "nonlinear dynamics",
-        "differential equations",
-        "parameter calibration"
-    ],
-    "license": "CC-BY-4.0",
-    "upload_type": "software",
-    "access_right": "open",
-    "version": "4.0.0",
-    "language": "eng"
+  "title": "EDAP Model v4.0: Endogenous Dissipation of Adaptive Potential",
+  "description": "A mathematical model of civilization dynamics based on endogenous dissipation of adaptive potential through intraspecific economic cannibalism. Includes GPU-accelerated simulation engine, calibration pipeline, proxy data for four historical civilizations, and LaTeX paper.",
+  "creators": [
+    {
+      "name": "Strebulaev, Sergey A.",
+      "orcid": "0009-0006-2710-8910",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "keywords": [
+    "civilization dynamics",
+    "Fermi paradox",
+    "Great Filter",
+    "mathematical modeling",
+    "cliodynamics",
+    "nonlinear dynamics",
+    "differential equations",
+    "parameter calibration"
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "4.0.0",
+  "language": "eng"
 }

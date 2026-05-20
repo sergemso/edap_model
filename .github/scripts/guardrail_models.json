@@ -1,0 +1,13 @@
+{
+  "models": [
+    "Mistral-large-2407",
+    "Llama-3.3-70B-Instruct",
+    "Phi-4"
+  ],
+  "temperature": 0.0,
+  "max_tokens": 2000,
+  "guardrails_max_chars": 8000,
+  "article_max_chars": 25000,
+  "max_consecutive_errors": 3,
+  "strip_latex": true
+}

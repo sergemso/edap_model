@@ -24,6 +24,19 @@ Violating these guardrails compromises scientific integrity.
 - Claims about candidate mechanisms for observed phenomena
 - Claims that generate falsifiable hypotheses for future testing
 
+### Academic Framing (Explicitly Permitted)
+- "We propose" — standard academic framing of a hypothesis
+- "We argue" — standard academic presentation of a position
+- "We suggest" — appropriate for qualitative implications
+- "We hypothesize" — appropriate for untested claims
+- "The model identifies" — description of model output
+- "The model suggests" — appropriate for qualitative implications
+- "Our results indicate" — appropriate when backed by metrics
+- "Our analysis reveals" — appropriate for analytical findings
+- "is consistent with" — appropriate for observational alignment
+- "aligns with" — appropriate for temporal coincidence
+- "supports the hypothesis" — appropriate for directional evidence
+
 ---
 
 ## Prohibited Claims

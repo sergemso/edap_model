@@ -1,0 +1,35 @@
+You are a strict reviewer checking a scientific paper against its guardrails and numerical results.
+
+GUARDRAILS:
+{guardrails}
+
+NUMERICAL RESULTS (from results.json):
+Training turn accuracy: {train_ta}
+Test turn accuracy: {test_ta}
+
+Civilization metrics:
+{civ_metrics}
+
+Check the article for:
+1. PROHIBITED claims only: "predicts", "demonstrates", "proves", "solves", "validated" (without qualification), causal claims ("caused", "triggered", "responded to"), overclaiming ("solves the Fermi Paradox", "early warning system"), normative claims
+2. REQUIRED CAVEATS — all 8 must appear somewhere
+3. TONE violations — claims at wrong confidence level
+4. CONSISTENCY — article numbers must match results.json numbers
+
+DO NOT flag: "propose", "argue", "suggest", "hypothesize", "identifies", "is consistent with", "aligns with", "our results indicate" — these are permitted academic language.
+
+Respond with JSON only:
+{{
+    "violations": [
+        {{
+            "type": "prohibited_claim | missing_caveat | tone | inconsistent_number",
+            "severity": "critical | minor",
+            "quote": "exact quote from article",
+            "fix": "how to fix"
+        }}
+    ],
+    "verdict": "pass | fail",
+    "summary": "one-sentence assessment"
+}}
+
+CRITICAL: temperature=0, be deterministic. Any prohibited claim = fail. Any missing caveat = fail. Any number mismatch = fail.

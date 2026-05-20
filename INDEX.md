@@ -15,68 +15,70 @@ EDAP (Endogenous Dissipation of Adaptive Potential) is a mathematical model of c
 
 ```
 edap_model/
-├── .zenodo.json                      # Zenodo archive metadata
-├── ADR.md                            # Architecture Decision Records & Guardrails
-├── BASE_FILES.md                     # Canonical source files for AI/colleague reconstruction
-├── CITATION.cff                      # Citation metadata
-├── GUARDRAILS.md                     # Version-invariant argumentation constraints for paper writing
-├── INDEX.md                          # This file
-├── INTERFACES.md                     # System architecture, module contracts, build pipeline (C4 diagrams)
-├── LICENSE                           # CC-BY-4.0
-├── README.md                         # Project overview, installation, usage
-├── ROADMAP.md                        # Future development plan
-├── THESES.md                         # Central argumentation chain and claims for the paper
-├── calibrate.py                      # Parameter calibration via differential evolution
-├── requirements.txt                  # Python dependencies
-├── run_model.py                      # Main entry point — full analysis pipeline
+├── .zenodo.json                         # Zenodo archive metadata
+├── ADR.md                               # Architecture Decision Records & Guardrails
+├── BASE_FILES.md                        # Canonical source files for AI/colleague reconstruction
+├── CITATION.cff                         # Citation metadata
+├── GUARDRAILS.md                        # Version-invariant argumentation constraints for paper writing
+├── INDEX.md                             # This file
+├── INTERFACES.md                        # System architecture, module contracts, build pipeline (C4 diagrams)
+├── LICENSE                              # CC-BY-4.0
+├── README.md                            # Project overview, installation, usage
+├── ROADMAP.md                           # Future development plan
+├── THESES.md                            # Central argumentation chain and claims for the paper
+├── calibrate.py                         # Parameter calibration via differential evolution
+├── requirements.txt                     # Python dependencies
+├── run_model.py                         # Main entry point — full analysis pipeline
 ├── .github/
 │   ├── workflows/
-│   │   └── release.yml               # CI pipeline: test, build, guardrail check
+│   │   └── release.yml                  # CI pipeline: test, build, guardrail check
 │   └── scripts/
-│       ├── guardrail_check.py        # LangChain guardrail + consistency check
-│       └── diff_metrics.py           # Compare metrics with previous release
+│       ├── guardrail_check.py           # LangChain guardrail + consistency check
+│       ├── guardrail_models.json        # model list
+│       ├── guardrail_system_prompt.txt  # system prompt template
+│       └── diff_metrics.py              # Compare metrics with previous release
 ├── paper/
-│   └── article.tex                   # LaTeX paper (v4.0 final)
+│   └── article.tex                      # LaTeX paper (v4.0 final)
 ├── edap_model/
-│   ├── __init__.py                   # Package init, re-exports key classes
-│   ├── model.py                      # EDAPModel class — ODE system, simulation
-│   ├── dynamics.py                   # Numba CUDA kernels + CPU fallback
-│   ├── cycles.py                     # CycleManager — recovery potential, reset logic
-│   ├── normalizer.py                 # Proxy → T,K,C normalization
-│   ├── metrics.py                    # Turn accuracy, Brier Skill Score, lead time
-│   ├── calibration.py                # Differential evolution calibration loop
-│   ├── latex_export.py               # Auto-generates LaTeX tables from results.json
-│   ├── export.py                     # results.json export
-│   ├── utils.py                      # load_json, path constants
+│   ├── __init__.py                      # Package init, re-exports key classes
+│   ├── model.py                         # EDAPModel class — ODE system, simulation
+│   ├── dynamics.py                      # Numba CUDA kernels + CPU fallback
+│   ├── cycles.py                        # CycleManager — recovery potential, reset logic
+│   ├── normalizer.py                    # Proxy → T,K,C normalization
+│   ├── metrics.py                       # Turn accuracy, Brier Skill Score, lead time
+│   ├── calibration.py                   # Differential evolution calibration loop
+│   ├── latex_export.py                  # Auto-generates LaTeX tables from results.json
+│   ├── export.py                        # results.json export
+│   ├── utils.py                         # load_json, path constants
 │   └── figures/
-│       ├── fig1_phase.py             # Phase portrait with streamlines + trajectories
-│       ├── fig2_timeseries.py        # Historical data with K_crit overlay
-│       ├── fig3_bifurcation.py       # Bifurcation sweeps + phase portraits
-│       ├── fig4_montecarlo.py        # GPU Monte Carlo: P(K>K_crit), P(dT/dt<0)
-│       └── fig5_summary.py           # Bar chart: K vs K_crit for 14 civilizations
+│       ├── fig1_phase.py                # Phase portrait with streamlines + trajectories
+│       ├── fig2_timeseries.py           # Historical data with K_crit overlay
+│       ├── fig3_bifurcation.py          # Bifurcation sweeps + phase portraits
+│       ├── fig4_montecarlo.py           # GPU Monte Carlo: P(K>K_crit), P(dT/dt<0)
+│       └── fig5_summary.py              # Bar chart: K vs K_crit for 14 civilizations
 ├── data/
-│   ├── parameters.json               # Default parameters, civilization configs, Monte Carlo settings
-│   ├── normalization_params.json     # Weights, min/max for proxy → T,K,C
-│   ├── summary_table.json            # Expert estimates for 14 civilizations (Figure 5)
+│   ├── parameters.json                  # Default parameters, civilization configs, Monte Carlo settings
+│   ├── normalization_params.json        # Weights, min/max for proxy → T,K,C
+│   ├── summary_table.json               # Expert estimates for 14 civilizations (Figure 5)
 │   └── raw/
-│       ├── rome_proxies.json         # 100 BCE – 476 CE, 6 data points
-│       ├── ussr_proxies.json         # 1922–1991, 6 data points
-│       ├── russia_proxies.json       # 2000–2024, 10 data points
-│       └── usa_proxies.json          # 1933–2024, 18 data points
+│       ├── rome_proxies.json            # 100 BCE – 476 CE, 6 data points
+│       ├── ussr_proxies.json            # 1922–1991, 6 data points
+│       ├── russia_proxies.json          # 2000–2024, 10 data points
+│       └── usa_proxies.json             # 1933–2024, 18 data points
 ├── tests/
-│   └── test_model.py                 # pytest suite: 25 tests covering model, cycles, metrics, simulation
-└── output/                           # All generated files (created by run_model.py)
+│   └── test_model.py                    # pytest suite: 25 tests covering model, cycles, metrics, simulation
+└── output/                              # All generated files (created by run_model.py)
     ├── fig1_phase_portrait.png
     ├── fig2_time_series.png
     ├── fig3_bifurcation.png
     ├── fig4_monte_carlo.png
     ├── fig5_summary_table.png
-    ├── results.json                  # Full numerical results + metrics
-    ├── calibration_results.json      # Output from calibrate.py
+    ├── results.json                     # Full numerical results + metrics
+    ├── calibration_results.json         # Output from calibrate.py
     ├── table_parameters.tex
     ├── table_turn_accuracy.tex
     ├── table_metrics.tex
-    └── table_turns_*.tex             # Turning points per civilization
+    └── table_turns_*.tex                # Turning points per civilization
 ```
 
 ---

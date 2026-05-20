@@ -1,582 +1,582 @@
 {
-    "civilization": "United States of America",
-    "period": {
-        "start": 1933,
-        "end": 2036
+  "civilization": "United States of America",
+  "period": {
+    "start": 1933,
+    "end": 2036
+  },
+  "data_points": [
+    {
+      "year": 1933,
+      "label": "New Deal / Great Depression trough",
+      "T_proxies": {
+        "energy_per_capita_GJ": 60.0,
+        "trade_volume_index": 0.12,
+        "urbanization_rate": 0.56,
+        "rnd_spending_pct_gdp": 0.40,
+        "high_tech_export_share": 0.08,
+        "manufacturing_output_index": 0.28
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.23,
+        "top_10_percent_wealth_share": 0.68,
+        "tax_regressivity_index": 0.25,
+        "rent_sector_dominance": 0.30,
+        "state_capture_index": 0.15,
+        "financialization_index": 0.10,
+        "external_debt_burden_export_index": 0.0
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.55,
+        "generalized_trust_proxy": 0.32,
+        "social_mobility_index": 0.45,
+        "education_spending_pct_gdp": 3.2,
+        "healthcare_spending_pct_gdp": 1.5,
+        "union_density": 0.12
+      }
     },
-    "data_points": [
-        {
-            "year": 1933,
-            "label": "New Deal / Great Depression trough",
-            "T_proxies": {
-                "energy_per_capita_GJ": 60.0,
-                "trade_volume_index": 0.12,
-                "urbanization_rate": 0.56,
-                "rnd_spending_pct_gdp": 0.40,
-                "high_tech_export_share": 0.08,
-                "manufacturing_output_index": 0.28
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.23,
-                "top_10_percent_wealth_share": 0.68,
-                "tax_regressivity_index": 0.25,
-                "rent_sector_dominance": 0.30,
-                "state_capture_index": 0.15,
-                "financialization_index": 0.10,
-                "external_debt_burden_export_index": 0.0
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.55,
-                "generalized_trust_proxy": 0.32,
-                "social_mobility_index": 0.45,
-                "education_spending_pct_gdp": 3.2,
-                "healthcare_spending_pct_gdp": 1.5,
-                "union_density": 0.12
-            }
-        },
-        {
-            "year": 1945,
-            "label": "Post-WWII / Bretton Woods establishment",
-            "T_proxies": {
-                "energy_per_capita_GJ": 100.0,
-                "trade_volume_index": 0.30,
-                "urbanization_rate": 0.64,
-                "rnd_spending_pct_gdp": 0.80,
-                "high_tech_export_share": 0.15,
-                "manufacturing_output_index": 0.65
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.12,
-                "top_10_percent_wealth_share": 0.35,
-                "tax_regressivity_index": 0.15,
-                "rent_sector_dominance": 0.15,
-                "state_capture_index": 0.08,
-                "financialization_index": 0.08,
-                "external_debt_burden_export_index": 0.0
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.60,
-                "generalized_trust_proxy": 0.55,
-                "social_mobility_index": 0.60,
-                "education_spending_pct_gdp": 4.0,
-                "healthcare_spending_pct_gdp": 2.0,
-                "union_density": 0.35
-            }
-        },
-        {
-            "year": 1955,
-            "label": "Eisenhower / Interstate Highway System",
-            "T_proxies": {
-                "energy_per_capita_GJ": 150.0,
-                "trade_volume_index": 0.40,
-                "urbanization_rate": 0.67,
-                "rnd_spending_pct_gdp": 1.60,
-                "high_tech_export_share": 0.20,
-                "manufacturing_output_index": 0.80
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.10,
-                "top_10_percent_wealth_share": 0.33,
-                "tax_regressivity_index": 0.12,
-                "rent_sector_dominance": 0.12,
-                "state_capture_index": 0.06,
-                "financialization_index": 0.07,
-                "external_debt_burden_export_index": 0.0
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.65,
-                "generalized_trust_proxy": 0.58,
-                "social_mobility_index": 0.62,
-                "education_spending_pct_gdp": 4.5,
-                "healthcare_spending_pct_gdp": 2.5,
-                "union_density": 0.33
-            }
-        },
-        {
-            "year": 1965,
-            "label": "Great Society / LBJ / Vietnam buildup begins",
-            "T_proxies": {
-                "energy_per_capita_GJ": 180.0,
-                "trade_volume_index": 0.45,
-                "urbanization_rate": 0.70,
-                "rnd_spending_pct_gdp": 2.00,
-                "high_tech_export_share": 0.22,
-                "manufacturing_output_index": 0.88
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.10,
-                "top_10_percent_wealth_share": 0.32,
-                "tax_regressivity_index": 0.10,
-                "rent_sector_dominance": 0.10,
-                "state_capture_index": 0.05,
-                "financialization_index": 0.08,
-                "external_debt_burden_export_index": 0.05
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.60,
-                "generalized_trust_proxy": 0.55,
-                "social_mobility_index": 0.58,
-                "education_spending_pct_gdp": 5.0,
-                "healthcare_spending_pct_gdp": 3.0,
-                "union_density": 0.30
-            }
-        },
-        {
-            "year": 1971,
-            "label": "Nixon Shock: gold window closed, dollar devalued",
-            "T_proxies": {
-                "energy_per_capita_GJ": 210.0,
-                "trade_volume_index": 0.50,
-                "urbanization_rate": 0.73,
-                "rnd_spending_pct_gdp": 1.80,
-                "high_tech_export_share": 0.20,
-                "manufacturing_output_index": 0.85
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.11,
-                "top_10_percent_wealth_share": 0.33,
-                "tax_regressivity_index": 0.12,
-                "rent_sector_dominance": 0.12,
-                "state_capture_index": 0.07,
-                "financialization_index": 0.10,
-                "external_debt_burden_export_index": 0.25
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.50,
-                "generalized_trust_proxy": 0.42,
-                "social_mobility_index": 0.50,
-                "education_spending_pct_gdp": 5.2,
-                "healthcare_spending_pct_gdp": 4.0,
-                "union_density": 0.27
-            }
-        },
-        {
-            "year": 1973,
-            "label": "Smithsonian Agreement breakdown / forced yen revaluation / Plaza Accord prelude",
-            "T_proxies": {
-                "energy_per_capita_GJ": 215.0,
-                "trade_volume_index": 0.52,
-                "urbanization_rate": 0.74,
-                "rnd_spending_pct_gdp": 1.70,
-                "high_tech_export_share": 0.19,
-                "manufacturing_output_index": 0.84
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.11,
-                "top_10_percent_wealth_share": 0.33,
-                "tax_regressivity_index": 0.12,
-                "rent_sector_dominance": 0.12,
-                "state_capture_index": 0.08,
-                "financialization_index": 0.12,
-                "external_debt_burden_export_index": 0.40
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.48,
-                "generalized_trust_proxy": 0.40,
-                "social_mobility_index": 0.48,
-                "education_spending_pct_gdp": 5.0,
-                "healthcare_spending_pct_gdp": 4.5,
-                "union_density": 0.26
-            }
-        },
-        {
-            "year": 1980,
-            "label": "Reagan election / Volcker shock / Plaza Accord buildup",
-            "T_proxies": {
-                "energy_per_capita_GJ": 220.0,
-                "trade_volume_index": 0.55,
-                "urbanization_rate": 0.74,
-                "rnd_spending_pct_gdp": 1.70,
-                "high_tech_export_share": 0.22,
-                "manufacturing_output_index": 0.80
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.12,
-                "top_10_percent_wealth_share": 0.35,
-                "tax_regressivity_index": 0.25,
-                "rent_sector_dominance": 0.18,
-                "state_capture_index": 0.10,
-                "financialization_index": 0.15,
-                "external_debt_burden_export_index": 0.35
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.40,
-                "generalized_trust_proxy": 0.38,
-                "social_mobility_index": 0.42,
-                "education_spending_pct_gdp": 4.8,
-                "healthcare_spending_pct_gdp": 5.5,
-                "union_density": 0.23
-            }
-        },
-        {
-            "year": 1985,
-            "label": "Plaza Accord: forced yen revaluation / Japan's 'Endaka' shock",
-            "T_proxies": {
-                "energy_per_capita_GJ": 225.0,
-                "trade_volume_index": 0.58,
-                "urbanization_rate": 0.75,
-                "rnd_spending_pct_gdp": 1.80,
-                "high_tech_export_share": 0.24,
-                "manufacturing_output_index": 0.78
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.13,
-                "top_10_percent_wealth_share": 0.36,
-                "tax_regressivity_index": 0.28,
-                "rent_sector_dominance": 0.20,
-                "state_capture_index": 0.12,
-                "financialization_index": 0.18,
-                "external_debt_burden_export_index": 0.55
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.38,
-                "generalized_trust_proxy": 0.40,
-                "social_mobility_index": 0.40,
-                "education_spending_pct_gdp": 4.6,
-                "healthcare_spending_pct_gdp": 6.0,
-                "union_density": 0.20
-            }
-        },
-        {
-            "year": 1988,
-            "label": "Japan bubble peak / US S&L crisis brewing",
-            "T_proxies": {
-                "energy_per_capita_GJ": 240.0,
-                "trade_volume_index": 0.60,
-                "urbanization_rate": 0.75,
-                "rnd_spending_pct_gdp": 1.80,
-                "high_tech_export_share": 0.25,
-                "manufacturing_output_index": 0.82
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.14,
-                "top_10_percent_wealth_share": 0.38,
-                "tax_regressivity_index": 0.30,
-                "rent_sector_dominance": 0.22,
-                "state_capture_index": 0.12,
-                "financialization_index": 0.20,
-                "external_debt_burden_export_index": 0.50
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.35,
-                "generalized_trust_proxy": 0.40,
-                "social_mobility_index": 0.38,
-                "education_spending_pct_gdp": 4.5,
-                "healthcare_spending_pct_gdp": 6.5,
-                "union_density": 0.18
-            }
-        },
-        {
-            "year": 1991,
-            "label": "USSR collapse / Japan bubble burst / 'Peace dividend'",
-            "T_proxies": {
-                "energy_per_capita_GJ": 245.0,
-                "trade_volume_index": 0.65,
-                "urbanization_rate": 0.76,
-                "rnd_spending_pct_gdp": 1.90,
-                "high_tech_export_share": 0.28,
-                "manufacturing_output_index": 0.78
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.14,
-                "top_10_percent_wealth_share": 0.37,
-                "tax_regressivity_index": 0.28,
-                "rent_sector_dominance": 0.20,
-                "state_capture_index": 0.10,
-                "financialization_index": 0.22,
-                "external_debt_burden_export_index": 0.45
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.38,
-                "generalized_trust_proxy": 0.42,
-                "social_mobility_index": 0.40,
-                "education_spending_pct_gdp": 4.3,
-                "healthcare_spending_pct_gdp": 7.5,
-                "union_density": 0.16
-            }
-        },
-        {
-            "year": 1995,
-            "label": "Japan's first lost decade / Rubin strong dollar / Asian financial crisis brewing",
-            "T_proxies": {
-                "energy_per_capita_GJ": 255.0,
-                "trade_volume_index": 0.72,
-                "urbanization_rate": 0.77,
-                "rnd_spending_pct_gdp": 1.75,
-                "high_tech_export_share": 0.30,
-                "manufacturing_output_index": 0.80
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.16,
-                "top_10_percent_wealth_share": 0.40,
-                "tax_regressivity_index": 0.30,
-                "rent_sector_dominance": 0.25,
-                "state_capture_index": 0.15,
-                "financialization_index": 0.28,
-                "external_debt_burden_export_index": 0.40
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.33,
-                "generalized_trust_proxy": 0.38,
-                "social_mobility_index": 0.35,
-                "education_spending_pct_gdp": 4.0,
-                "healthcare_spending_pct_gdp": 8.2,
-                "union_density": 0.14
-            }
-        },
-        {
-            "year": 2000,
-            "label": "Dot-com bubble / Pre-9/11 peak / Japan enters second lost decade",
-            "T_proxies": {
-                "energy_per_capita_GJ": 265.0,
-                "trade_volume_index": 0.78,
-                "urbanization_rate": 0.79,
-                "rnd_spending_pct_gdp": 2.10,
-                "high_tech_export_share": 0.32,
-                "manufacturing_output_index": 0.78
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.18,
-                "top_10_percent_wealth_share": 0.43,
-                "tax_regressivity_index": 0.32,
-                "rent_sector_dominance": 0.28,
-                "state_capture_index": 0.18,
-                "financialization_index": 0.32,
-                "external_debt_burden_export_index": 0.35
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.30,
-                "generalized_trust_proxy": 0.36,
-                "social_mobility_index": 0.32,
-                "education_spending_pct_gdp": 3.8,
-                "healthcare_spending_pct_gdp": 8.8,
-                "union_density": 0.12
-            }
-        },
-        {
-            "year": 2003,
-            "label": "Iraq War / Bush tax cuts / China absorbs Treasuries",
-            "T_proxies": {
-                "energy_per_capita_GJ": 265.0,
-                "trade_volume_index": 0.75,
-                "urbanization_rate": 0.80,
-                "rnd_spending_pct_gdp": 1.95,
-                "high_tech_export_share": 0.28,
-                "manufacturing_output_index": 0.70
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.19,
-                "top_10_percent_wealth_share": 0.46,
-                "tax_regressivity_index": 0.38,
-                "rent_sector_dominance": 0.32,
-                "state_capture_index": 0.22,
-                "financialization_index": 0.38,
-                "external_debt_burden_export_index": 0.40
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.27,
-                "generalized_trust_proxy": 0.32,
-                "social_mobility_index": 0.30,
-                "education_spending_pct_gdp": 3.6,
-                "healthcare_spending_pct_gdp": 9.5,
-                "union_density": 0.11
-            }
-        },
-        {
-            "year": 2008,
-            "label": "GFC / TARP bailouts / Fed QE begins / dollar reserve demand spikes",
-            "T_proxies": {
-                "energy_per_capita_GJ": 255.0,
-                "trade_volume_index": 0.68,
-                "urbanization_rate": 0.81,
-                "rnd_spending_pct_gdp": 2.00,
-                "high_tech_export_share": 0.25,
-                "manufacturing_output_index": 0.58
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.21,
-                "top_10_percent_wealth_share": 0.50,
-                "tax_regressivity_index": 0.35,
-                "rent_sector_dominance": 0.38,
-                "state_capture_index": 0.30,
-                "financialization_index": 0.42,
-                "external_debt_burden_export_index": 0.30
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.25,
-                "generalized_trust_proxy": 0.28,
-                "social_mobility_index": 0.28,
-                "education_spending_pct_gdp": 3.5,
-                "healthcare_spending_pct_gdp": 10.5,
-                "union_density": 0.10
-            }
-        },
-        {
-            "year": 2012,
-            "label": "Post-GFC recovery / Occupy / Europe absorbs PIIGS crisis",
-            "T_proxies": {
-                "energy_per_capita_GJ": 260.0,
-                "trade_volume_index": 0.72,
-                "urbanization_rate": 0.81,
-                "rnd_spending_pct_gdp": 1.90,
-                "high_tech_export_share": 0.24,
-                "manufacturing_output_index": 0.62
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.22,
-                "top_10_percent_wealth_share": 0.52,
-                "tax_regressivity_index": 0.36,
-                "rent_sector_dominance": 0.40,
-                "state_capture_index": 0.32,
-                "financialization_index": 0.45,
-                "external_debt_burden_export_index": 0.35
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.23,
-                "generalized_trust_proxy": 0.25,
-                "social_mobility_index": 0.26,
-                "education_spending_pct_gdp": 3.3,
-                "healthcare_spending_pct_gdp": 11.0,
-                "union_density": 0.09
-            }
-        },
-        {
-            "year": 2016,
-            "label": "Trump election / populist backlash / China Treasury holdings peak",
-            "T_proxies": {
-                "energy_per_capita_GJ": 265.0,
-                "trade_volume_index": 0.70,
-                "urbanization_rate": 0.82,
-                "rnd_spending_pct_gdp": 2.00,
-                "high_tech_export_share": 0.23,
-                "manufacturing_output_index": 0.60
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.23,
-                "top_10_percent_wealth_share": 0.55,
-                "tax_regressivity_index": 0.42,
-                "rent_sector_dominance": 0.45,
-                "state_capture_index": 0.35,
-                "financialization_index": 0.48,
-                "external_debt_burden_export_index": 0.38
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.20,
-                "generalized_trust_proxy": 0.20,
-                "social_mobility_index": 0.22,
-                "education_spending_pct_gdp": 3.1,
-                "healthcare_spending_pct_gdp": 11.5,
-                "union_density": 0.08
-            }
-        },
-        {
-            "year": 2020,
-            "label": "COVID / $5T stimulus / Fed $9T balance sheet / wealth transfer",
-            "T_proxies": {
-                "energy_per_capita_GJ": 240.0,
-                "trade_volume_index": 0.60,
-                "urbanization_rate": 0.83,
-                "rnd_spending_pct_gdp": 2.20,
-                "high_tech_export_share": 0.22,
-                "manufacturing_output_index": 0.55
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.24,
-                "top_10_percent_wealth_share": 0.58,
-                "tax_regressivity_index": 0.40,
-                "rent_sector_dominance": 0.48,
-                "state_capture_index": 0.38,
-                "financialization_index": 0.52,
-                "external_debt_burden_export_index": 0.42
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.22,
-                "generalized_trust_proxy": 0.18,
-                "social_mobility_index": 0.20,
-                "education_spending_pct_gdp": 3.0,
-                "healthcare_spending_pct_gdp": 12.5,
-                "union_density": 0.07
-            }
-        },
-        {
-            "year": 2024,
-            "label": "Current: post-COVID inflation / AI boom / debt service > defense",
-            "T_proxies": {
-                "energy_per_capita_GJ": 250.0,
-                "trade_volume_index": 0.65,
-                "urbanization_rate": 0.83,
-                "rnd_spending_pct_gdp": 2.50,
-                "high_tech_export_share": 0.25,
-                "manufacturing_output_index": 0.58
-            },
-            "K_proxies": {
-                "top_1_percent_income_share": 0.25,
-                "top_10_percent_wealth_share": 0.60,
-                "tax_regressivity_index": 0.42,
-                "rent_sector_dominance": 0.50,
-                "state_capture_index": 0.40,
-                "financialization_index": 0.55,
-                "external_debt_burden_export_index": 0.45
-            },
-            "C_proxies": {
-                "public_infrastructure_share": 0.20,
-                "generalized_trust_proxy": 0.15,
-                "social_mobility_index": 0.18,
-                "education_spending_pct_gdp": 2.9,
-                "healthcare_spending_pct_gdp": 13.0,
-                "union_density": 0.07
-            }
-        }
-    ],
-    "data_sources": {
-        "energy_per_capita_GJ": "EIA Monthly Energy Review; BP Statistical Review; Smil (2017) historical estimates",
-        "trade_volume_index": "World Bank WITS; BEA trade data; ratio of trade to GDP normalized to 2000 peak",
-        "urbanization_rate": "US Census Bureau; UN World Urbanization Prospects",
-        "rnd_spending_pct_gdp": "NSF Science & Engineering Indicators; OECD R&D statistics; AAAS historical series",
-        "high_tech_export_share": "World Bank TCdata360; share of high-tech in manufactured exports",
-        "manufacturing_output_index": "Federal Reserve Industrial Production Index (manufacturing) normalized to 1972 baseline",
-        "top_1_percent_income_share": "Piketty & Saez (2003) updated series; World Inequality Database (WID.world)",
-        "top_10_percent_wealth_share": "Federal Reserve DFA Survey of Consumer Finances; Saez & Zucman (2016, 2020); WID.world",
-        "tax_regressivity_index": "IRS SOI Tax Stats; Piketty, Saez & Zucman (2018); effective tax rate ratio bottom 50% / top 1% normalized",
-        "rent_sector_dominance": "BEA GDP by industry; share of FIRE + monopoly platform rents in corporate profits",
-        "state_capture_index": "Gilens & Page (2014); V-Dem polyarchy index; Citizens United 2010 effect; lobbying / GDP ratio",
-        "financialization_index": "Krippner (2005) metric; ratio financial sector profits to total corporate profits; financial assets / GDP",
-        "external_debt_burden_export_index": "US Treasury TIC data; foreign holdings of US Treasuries / foreign GDP ratio; measure of debt burden successfully 'exported' to allies via currency agreements (Smithsonian 1971, Plaza 1985) and reserve accumulation by Japan/China/Europe",
-        "public_infrastructure_share": "CBO Historical Budget Data; share of federal + state spending on infrastructure vs transfers to financial sector",
-        "generalized_trust_proxy": "General Social Survey (GSS) trust question; Pew Research social trust surveys; ANES trust in government index",
-        "social_mobility_index": "Chetty et al. (2017) Opportunity Atlas; intergenerational income elasticity; PSID panel data",
-        "education_spending_pct_gdp": "NCES Digest of Education Statistics; OECD Education at a Glance; state + local + federal",
-        "healthcare_spending_pct_gdp": "CMS National Health Expenditure Data; OECD Health Statistics",
-        "union_density": "Bureau of Labor Statistics union membership; historical series from Troy & Sheflin (1985)"
+    {
+      "year": 1945,
+      "label": "Post-WWII / Bretton Woods establishment",
+      "T_proxies": {
+        "energy_per_capita_GJ": 100.0,
+        "trade_volume_index": 0.30,
+        "urbanization_rate": 0.64,
+        "rnd_spending_pct_gdp": 0.80,
+        "high_tech_export_share": 0.15,
+        "manufacturing_output_index": 0.65
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.12,
+        "top_10_percent_wealth_share": 0.35,
+        "tax_regressivity_index": 0.15,
+        "rent_sector_dominance": 0.15,
+        "state_capture_index": 0.08,
+        "financialization_index": 0.08,
+        "external_debt_burden_export_index": 0.0
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.60,
+        "generalized_trust_proxy": 0.55,
+        "social_mobility_index": 0.60,
+        "education_spending_pct_gdp": 4.0,
+        "healthcare_spending_pct_gdp": 2.0,
+        "union_density": 0.35
+      }
     },
-    "notes": {
-        "period_1933_1971": "The 'Great Compression': Bretton Woods, Glass-Steagall, high marginal tax rates, strong unions produce low K, high C. US runs trade surpluses, builds domestic infrastructure, maintains gold convertibility. This is the baseline 'civilizational' attractor.",
-        "mechanism_smithsonian_1971_1973": "Nixon Shock (Aug 1971): US closes gold window, imposes 10% import surcharge. December 1971 Smithsonian Agreement: dollar devalued from $35 to $38/oz, yen revalued from ¥360 to ¥308 (16.9% appreciation), D-mark revalued 13.6%. February 1973: dollar devalued again to $42.22/oz, yen floats up to ¥265. Total yen appreciation 1971-1973: ~36%. This forced revaluation exports US inflation to Japan and Germany, making their exports more expensive and reducing US real debt burden. Japan's export-led model is structurally broken; To offset, Japan undertakes massive domestic stimulus (Tanaka plan) and loose monetary policy, planting seeds of 1980s bubble. This is the first major 'external debt burden export' operation.",
-        "mechanism_plaza_accord_1985": "G5 meeting at Plaza Hotel: US deliberately drives down dollar vs yen and D-mark. Yen appreciates from ¥240 to ¥120 over 1985-1988 (50%). Japan forced to undertake massive monetary easing to offset export drag, creating asset bubble (Nikkei peaks 1989, real estate peaks 1991). Bubble bursts, Japan enters 'lost decades'. Japanese institutional investors (MoF, postal savings, insurers) continue buying US Treasuries throughout, funding US deficits. Plaza Accord is the second major 'debt burden export' — US offloads adjustment cost onto Japan's financial system, creating permanent stagnation.",
-        "mechanism_ussr_collapse_1991": "Third one-time extraction: ex-Soviet intellectual property, natural resources, and dollarization of post-Soviet space generate massive windfall. Russian brain drain supplies US tech sector. Oil/gas resources come under Western extraction terms. This creates the 'peace dividend' illusion that US K can rise without consequence.",
-        "mechanism_china_treasury_accumulation_2000_2015": "China pegs yuan to dollar, accumulates $1T+ in Treasuries. Suppresses US interest rates, enables housing bubble and federal deficit expansion. Functionally identical to Japan's role in 1980s-1990s: export surplus recycled into US debt, suppressing domestic consumption in creditor country.",
-        "period_2000_2036_projection": "Post-2000: all three external debt export mechanisms mature and decline. Japan is maxed out (250% debt/GDP). Europe faces structural stagnation. China diversifies from Treasuries (holdings drop from $1.3T 2013 to $800B 2024). De-dollarization accelerates (BRICS, bilateral swap lines). US must absorb its own debt internally for first time since 1971. This is the structural break that the model projects will force K upward as elites defend position through domestic extraction (healthcare rents, platform monopolization, fiscal regressivity) rather than external burden-shifting. The external_debt_burden_export_index rises from 0.0 (1945) to ~0.72 (2036 projection) as the mechanism exhausts — meaning the US can no longer export its adjustment costs, and domestic K accelerates.",
-        "mechanisms_of_k_rise": [
-            "Bretton Woods collapse (1971): removes external discipline, enables persistent deficits",
-            "Smithsonian Agreement (1971-73): forced yen/D-mark revaluation, exports inflation",
-            "Petrodollar recycling (1973+): Saudi/Treasury deal, dollar demand for oil trade",
-            "Plaza Accord (1985): forced yen appreciation breaks Japan's export model, Japan buys Treasuries",
-            "USSR collapse (1991): one-time resource/brain extraction, dollar hegemony expansion",
-            "Glass-Steagall repeal (1999): removes firewall between commercial and investment banking",
-            "China Treasury accumulation (2000-2013): suppresses US rates, enables housing bubble",
-            "QE programs (2008-2022): asset purchases disproportionately benefit wealth holders",
-            "Citizens United (2010): unlimited corporate political spending",
-            "Platform monopolization: network effects create rent-extracting tech giants"
-        ],
-        "mechanisms_of_k_postponement": [
-            "Smithsonian/Plaza forced revaluations: export debt burden to Japan/Europe",
-            "Petrodollar system: dollar demand for oil transactions",
-            "Japan Treasury purchases: fund US deficits 1985-2010",
-            "China Treasury purchases: fund US deficits 2000-2015",
-            "USSR collapse: one-time resource extraction and dollarization",
-            "Tech/AI boom: productivity gains temporarily offset K drag on T",
-            "Shale revolution: energy independence reduces trade deficit pressure",
-            "Dollar reserve status: persistent demand for Treasuries at suppressed rates"
-        ]
+    {
+      "year": 1955,
+      "label": "Eisenhower / Interstate Highway System",
+      "T_proxies": {
+        "energy_per_capita_GJ": 150.0,
+        "trade_volume_index": 0.40,
+        "urbanization_rate": 0.67,
+        "rnd_spending_pct_gdp": 1.60,
+        "high_tech_export_share": 0.20,
+        "manufacturing_output_index": 0.80
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.10,
+        "top_10_percent_wealth_share": 0.33,
+        "tax_regressivity_index": 0.12,
+        "rent_sector_dominance": 0.12,
+        "state_capture_index": 0.06,
+        "financialization_index": 0.07,
+        "external_debt_burden_export_index": 0.0
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.65,
+        "generalized_trust_proxy": 0.58,
+        "social_mobility_index": 0.62,
+        "education_spending_pct_gdp": 4.5,
+        "healthcare_spending_pct_gdp": 2.5,
+        "union_density": 0.33
+      }
+    },
+    {
+      "year": 1965,
+      "label": "Great Society / LBJ / Vietnam buildup begins",
+      "T_proxies": {
+        "energy_per_capita_GJ": 180.0,
+        "trade_volume_index": 0.45,
+        "urbanization_rate": 0.70,
+        "rnd_spending_pct_gdp": 2.00,
+        "high_tech_export_share": 0.22,
+        "manufacturing_output_index": 0.88
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.10,
+        "top_10_percent_wealth_share": 0.32,
+        "tax_regressivity_index": 0.10,
+        "rent_sector_dominance": 0.10,
+        "state_capture_index": 0.05,
+        "financialization_index": 0.08,
+        "external_debt_burden_export_index": 0.05
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.60,
+        "generalized_trust_proxy": 0.55,
+        "social_mobility_index": 0.58,
+        "education_spending_pct_gdp": 5.0,
+        "healthcare_spending_pct_gdp": 3.0,
+        "union_density": 0.30
+      }
+    },
+    {
+      "year": 1971,
+      "label": "Nixon Shock: gold window closed, dollar devalued",
+      "T_proxies": {
+        "energy_per_capita_GJ": 210.0,
+        "trade_volume_index": 0.50,
+        "urbanization_rate": 0.73,
+        "rnd_spending_pct_gdp": 1.80,
+        "high_tech_export_share": 0.20,
+        "manufacturing_output_index": 0.85
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.11,
+        "top_10_percent_wealth_share": 0.33,
+        "tax_regressivity_index": 0.12,
+        "rent_sector_dominance": 0.12,
+        "state_capture_index": 0.07,
+        "financialization_index": 0.10,
+        "external_debt_burden_export_index": 0.25
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.50,
+        "generalized_trust_proxy": 0.42,
+        "social_mobility_index": 0.50,
+        "education_spending_pct_gdp": 5.2,
+        "healthcare_spending_pct_gdp": 4.0,
+        "union_density": 0.27
+      }
+    },
+    {
+      "year": 1973,
+      "label": "Smithsonian Agreement breakdown / forced yen revaluation / Plaza Accord prelude",
+      "T_proxies": {
+        "energy_per_capita_GJ": 215.0,
+        "trade_volume_index": 0.52,
+        "urbanization_rate": 0.74,
+        "rnd_spending_pct_gdp": 1.70,
+        "high_tech_export_share": 0.19,
+        "manufacturing_output_index": 0.84
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.11,
+        "top_10_percent_wealth_share": 0.33,
+        "tax_regressivity_index": 0.12,
+        "rent_sector_dominance": 0.12,
+        "state_capture_index": 0.08,
+        "financialization_index": 0.12,
+        "external_debt_burden_export_index": 0.40
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.48,
+        "generalized_trust_proxy": 0.40,
+        "social_mobility_index": 0.48,
+        "education_spending_pct_gdp": 5.0,
+        "healthcare_spending_pct_gdp": 4.5,
+        "union_density": 0.26
+      }
+    },
+    {
+      "year": 1980,
+      "label": "Reagan election / Volcker shock / Plaza Accord buildup",
+      "T_proxies": {
+        "energy_per_capita_GJ": 220.0,
+        "trade_volume_index": 0.55,
+        "urbanization_rate": 0.74,
+        "rnd_spending_pct_gdp": 1.70,
+        "high_tech_export_share": 0.22,
+        "manufacturing_output_index": 0.80
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.12,
+        "top_10_percent_wealth_share": 0.35,
+        "tax_regressivity_index": 0.25,
+        "rent_sector_dominance": 0.18,
+        "state_capture_index": 0.10,
+        "financialization_index": 0.15,
+        "external_debt_burden_export_index": 0.35
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.40,
+        "generalized_trust_proxy": 0.38,
+        "social_mobility_index": 0.42,
+        "education_spending_pct_gdp": 4.8,
+        "healthcare_spending_pct_gdp": 5.5,
+        "union_density": 0.23
+      }
+    },
+    {
+      "year": 1985,
+      "label": "Plaza Accord: forced yen revaluation / Japan's 'Endaka' shock",
+      "T_proxies": {
+        "energy_per_capita_GJ": 225.0,
+        "trade_volume_index": 0.58,
+        "urbanization_rate": 0.75,
+        "rnd_spending_pct_gdp": 1.80,
+        "high_tech_export_share": 0.24,
+        "manufacturing_output_index": 0.78
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.13,
+        "top_10_percent_wealth_share": 0.36,
+        "tax_regressivity_index": 0.28,
+        "rent_sector_dominance": 0.20,
+        "state_capture_index": 0.12,
+        "financialization_index": 0.18,
+        "external_debt_burden_export_index": 0.55
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.38,
+        "generalized_trust_proxy": 0.40,
+        "social_mobility_index": 0.40,
+        "education_spending_pct_gdp": 4.6,
+        "healthcare_spending_pct_gdp": 6.0,
+        "union_density": 0.20
+      }
+    },
+    {
+      "year": 1988,
+      "label": "Japan bubble peak / US S&L crisis brewing",
+      "T_proxies": {
+        "energy_per_capita_GJ": 240.0,
+        "trade_volume_index": 0.60,
+        "urbanization_rate": 0.75,
+        "rnd_spending_pct_gdp": 1.80,
+        "high_tech_export_share": 0.25,
+        "manufacturing_output_index": 0.82
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.14,
+        "top_10_percent_wealth_share": 0.38,
+        "tax_regressivity_index": 0.30,
+        "rent_sector_dominance": 0.22,
+        "state_capture_index": 0.12,
+        "financialization_index": 0.20,
+        "external_debt_burden_export_index": 0.50
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.35,
+        "generalized_trust_proxy": 0.40,
+        "social_mobility_index": 0.38,
+        "education_spending_pct_gdp": 4.5,
+        "healthcare_spending_pct_gdp": 6.5,
+        "union_density": 0.18
+      }
+    },
+    {
+      "year": 1991,
+      "label": "USSR collapse / Japan bubble burst / 'Peace dividend'",
+      "T_proxies": {
+        "energy_per_capita_GJ": 245.0,
+        "trade_volume_index": 0.65,
+        "urbanization_rate": 0.76,
+        "rnd_spending_pct_gdp": 1.90,
+        "high_tech_export_share": 0.28,
+        "manufacturing_output_index": 0.78
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.14,
+        "top_10_percent_wealth_share": 0.37,
+        "tax_regressivity_index": 0.28,
+        "rent_sector_dominance": 0.20,
+        "state_capture_index": 0.10,
+        "financialization_index": 0.22,
+        "external_debt_burden_export_index": 0.45
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.38,
+        "generalized_trust_proxy": 0.42,
+        "social_mobility_index": 0.40,
+        "education_spending_pct_gdp": 4.3,
+        "healthcare_spending_pct_gdp": 7.5,
+        "union_density": 0.16
+      }
+    },
+    {
+      "year": 1995,
+      "label": "Japan's first lost decade / Rubin strong dollar / Asian financial crisis brewing",
+      "T_proxies": {
+        "energy_per_capita_GJ": 255.0,
+        "trade_volume_index": 0.72,
+        "urbanization_rate": 0.77,
+        "rnd_spending_pct_gdp": 1.75,
+        "high_tech_export_share": 0.30,
+        "manufacturing_output_index": 0.80
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.16,
+        "top_10_percent_wealth_share": 0.40,
+        "tax_regressivity_index": 0.30,
+        "rent_sector_dominance": 0.25,
+        "state_capture_index": 0.15,
+        "financialization_index": 0.28,
+        "external_debt_burden_export_index": 0.40
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.33,
+        "generalized_trust_proxy": 0.38,
+        "social_mobility_index": 0.35,
+        "education_spending_pct_gdp": 4.0,
+        "healthcare_spending_pct_gdp": 8.2,
+        "union_density": 0.14
+      }
+    },
+    {
+      "year": 2000,
+      "label": "Dot-com bubble / Pre-9/11 peak / Japan enters second lost decade",
+      "T_proxies": {
+        "energy_per_capita_GJ": 265.0,
+        "trade_volume_index": 0.78,
+        "urbanization_rate": 0.79,
+        "rnd_spending_pct_gdp": 2.10,
+        "high_tech_export_share": 0.32,
+        "manufacturing_output_index": 0.78
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.18,
+        "top_10_percent_wealth_share": 0.43,
+        "tax_regressivity_index": 0.32,
+        "rent_sector_dominance": 0.28,
+        "state_capture_index": 0.18,
+        "financialization_index": 0.32,
+        "external_debt_burden_export_index": 0.35
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.30,
+        "generalized_trust_proxy": 0.36,
+        "social_mobility_index": 0.32,
+        "education_spending_pct_gdp": 3.8,
+        "healthcare_spending_pct_gdp": 8.8,
+        "union_density": 0.12
+      }
+    },
+    {
+      "year": 2003,
+      "label": "Iraq War / Bush tax cuts / China absorbs Treasuries",
+      "T_proxies": {
+        "energy_per_capita_GJ": 265.0,
+        "trade_volume_index": 0.75,
+        "urbanization_rate": 0.80,
+        "rnd_spending_pct_gdp": 1.95,
+        "high_tech_export_share": 0.28,
+        "manufacturing_output_index": 0.70
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.19,
+        "top_10_percent_wealth_share": 0.46,
+        "tax_regressivity_index": 0.38,
+        "rent_sector_dominance": 0.32,
+        "state_capture_index": 0.22,
+        "financialization_index": 0.38,
+        "external_debt_burden_export_index": 0.40
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.27,
+        "generalized_trust_proxy": 0.32,
+        "social_mobility_index": 0.30,
+        "education_spending_pct_gdp": 3.6,
+        "healthcare_spending_pct_gdp": 9.5,
+        "union_density": 0.11
+      }
+    },
+    {
+      "year": 2008,
+      "label": "GFC / TARP bailouts / Fed QE begins / dollar reserve demand spikes",
+      "T_proxies": {
+        "energy_per_capita_GJ": 255.0,
+        "trade_volume_index": 0.68,
+        "urbanization_rate": 0.81,
+        "rnd_spending_pct_gdp": 2.00,
+        "high_tech_export_share": 0.25,
+        "manufacturing_output_index": 0.58
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.21,
+        "top_10_percent_wealth_share": 0.50,
+        "tax_regressivity_index": 0.35,
+        "rent_sector_dominance": 0.38,
+        "state_capture_index": 0.30,
+        "financialization_index": 0.42,
+        "external_debt_burden_export_index": 0.30
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.25,
+        "generalized_trust_proxy": 0.28,
+        "social_mobility_index": 0.28,
+        "education_spending_pct_gdp": 3.5,
+        "healthcare_spending_pct_gdp": 10.5,
+        "union_density": 0.10
+      }
+    },
+    {
+      "year": 2012,
+      "label": "Post-GFC recovery / Occupy / Europe absorbs PIIGS crisis",
+      "T_proxies": {
+        "energy_per_capita_GJ": 260.0,
+        "trade_volume_index": 0.72,
+        "urbanization_rate": 0.81,
+        "rnd_spending_pct_gdp": 1.90,
+        "high_tech_export_share": 0.24,
+        "manufacturing_output_index": 0.62
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.22,
+        "top_10_percent_wealth_share": 0.52,
+        "tax_regressivity_index": 0.36,
+        "rent_sector_dominance": 0.40,
+        "state_capture_index": 0.32,
+        "financialization_index": 0.45,
+        "external_debt_burden_export_index": 0.35
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.23,
+        "generalized_trust_proxy": 0.25,
+        "social_mobility_index": 0.26,
+        "education_spending_pct_gdp": 3.3,
+        "healthcare_spending_pct_gdp": 11.0,
+        "union_density": 0.09
+      }
+    },
+    {
+      "year": 2016,
+      "label": "Trump election / populist backlash / China Treasury holdings peak",
+      "T_proxies": {
+        "energy_per_capita_GJ": 265.0,
+        "trade_volume_index": 0.70,
+        "urbanization_rate": 0.82,
+        "rnd_spending_pct_gdp": 2.00,
+        "high_tech_export_share": 0.23,
+        "manufacturing_output_index": 0.60
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.23,
+        "top_10_percent_wealth_share": 0.55,
+        "tax_regressivity_index": 0.42,
+        "rent_sector_dominance": 0.45,
+        "state_capture_index": 0.35,
+        "financialization_index": 0.48,
+        "external_debt_burden_export_index": 0.38
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.20,
+        "generalized_trust_proxy": 0.20,
+        "social_mobility_index": 0.22,
+        "education_spending_pct_gdp": 3.1,
+        "healthcare_spending_pct_gdp": 11.5,
+        "union_density": 0.08
+      }
+    },
+    {
+      "year": 2020,
+      "label": "COVID / $5T stimulus / Fed $9T balance sheet / wealth transfer",
+      "T_proxies": {
+        "energy_per_capita_GJ": 240.0,
+        "trade_volume_index": 0.60,
+        "urbanization_rate": 0.83,
+        "rnd_spending_pct_gdp": 2.20,
+        "high_tech_export_share": 0.22,
+        "manufacturing_output_index": 0.55
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.24,
+        "top_10_percent_wealth_share": 0.58,
+        "tax_regressivity_index": 0.40,
+        "rent_sector_dominance": 0.48,
+        "state_capture_index": 0.38,
+        "financialization_index": 0.52,
+        "external_debt_burden_export_index": 0.42
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.22,
+        "generalized_trust_proxy": 0.18,
+        "social_mobility_index": 0.20,
+        "education_spending_pct_gdp": 3.0,
+        "healthcare_spending_pct_gdp": 12.5,
+        "union_density": 0.07
+      }
+    },
+    {
+      "year": 2024,
+      "label": "Current: post-COVID inflation / AI boom / debt service > defense",
+      "T_proxies": {
+        "energy_per_capita_GJ": 250.0,
+        "trade_volume_index": 0.65,
+        "urbanization_rate": 0.83,
+        "rnd_spending_pct_gdp": 2.50,
+        "high_tech_export_share": 0.25,
+        "manufacturing_output_index": 0.58
+      },
+      "K_proxies": {
+        "top_1_percent_income_share": 0.25,
+        "top_10_percent_wealth_share": 0.60,
+        "tax_regressivity_index": 0.42,
+        "rent_sector_dominance": 0.50,
+        "state_capture_index": 0.40,
+        "financialization_index": 0.55,
+        "external_debt_burden_export_index": 0.45
+      },
+      "C_proxies": {
+        "public_infrastructure_share": 0.20,
+        "generalized_trust_proxy": 0.15,
+        "social_mobility_index": 0.18,
+        "education_spending_pct_gdp": 2.9,
+        "healthcare_spending_pct_gdp": 13.0,
+        "union_density": 0.07
+      }
     }
+  ],
+  "data_sources": {
+    "energy_per_capita_GJ": "EIA Monthly Energy Review; BP Statistical Review; Smil (2017) historical estimates",
+    "trade_volume_index": "World Bank WITS; BEA trade data; ratio of trade to GDP normalized to 2000 peak",
+    "urbanization_rate": "US Census Bureau; UN World Urbanization Prospects",
+    "rnd_spending_pct_gdp": "NSF Science & Engineering Indicators; OECD R&D statistics; AAAS historical series",
+    "high_tech_export_share": "World Bank TCdata360; share of high-tech in manufactured exports",
+    "manufacturing_output_index": "Federal Reserve Industrial Production Index (manufacturing) normalized to 1972 baseline",
+    "top_1_percent_income_share": "Piketty & Saez (2003) updated series; World Inequality Database (WID.world)",
+    "top_10_percent_wealth_share": "Federal Reserve DFA Survey of Consumer Finances; Saez & Zucman (2016, 2020); WID.world",
+    "tax_regressivity_index": "IRS SOI Tax Stats; Piketty, Saez & Zucman (2018); effective tax rate ratio bottom 50% / top 1% normalized",
+    "rent_sector_dominance": "BEA GDP by industry; share of FIRE + monopoly platform rents in corporate profits",
+    "state_capture_index": "Gilens & Page (2014); V-Dem polyarchy index; Citizens United 2010 effect; lobbying / GDP ratio",
+    "financialization_index": "Krippner (2005) metric; ratio financial sector profits to total corporate profits; financial assets / GDP",
+    "external_debt_burden_export_index": "US Treasury TIC data; foreign holdings of US Treasuries / foreign GDP ratio; measure of debt burden successfully 'exported' to allies via currency agreements (Smithsonian 1971, Plaza 1985) and reserve accumulation by Japan/China/Europe",
+    "public_infrastructure_share": "CBO Historical Budget Data; share of federal + state spending on infrastructure vs transfers to financial sector",
+    "generalized_trust_proxy": "General Social Survey (GSS) trust question; Pew Research social trust surveys; ANES trust in government index",
+    "social_mobility_index": "Chetty et al. (2017) Opportunity Atlas; intergenerational income elasticity; PSID panel data",
+    "education_spending_pct_gdp": "NCES Digest of Education Statistics; OECD Education at a Glance; state + local + federal",
+    "healthcare_spending_pct_gdp": "CMS National Health Expenditure Data; OECD Health Statistics",
+    "union_density": "Bureau of Labor Statistics union membership; historical series from Troy & Sheflin (1985)"
+  },
+  "notes": {
+    "period_1933_1971": "The 'Great Compression': Bretton Woods, Glass-Steagall, high marginal tax rates, strong unions produce low K, high C. US runs trade surpluses, builds domestic infrastructure, maintains gold convertibility. This is the baseline 'civilizational' attractor.",
+    "mechanism_smithsonian_1971_1973": "Nixon Shock (Aug 1971): US closes gold window, imposes 10% import surcharge. December 1971 Smithsonian Agreement: dollar devalued from $35 to $38/oz, yen revalued from ¥360 to ¥308 (16.9% appreciation), D-mark revalued 13.6%. February 1973: dollar devalued again to $42.22/oz, yen floats up to ¥265. Total yen appreciation 1971-1973: ~36%. This forced revaluation exports US inflation to Japan and Germany, making their exports more expensive and reducing US real debt burden. Japan's export-led model is structurally broken; To offset, Japan undertakes massive domestic stimulus (Tanaka plan) and loose monetary policy, planting seeds of 1980s bubble. This is the first major 'external debt burden export' operation.",
+    "mechanism_plaza_accord_1985": "G5 meeting at Plaza Hotel: US deliberately drives down dollar vs yen and D-mark. Yen appreciates from ¥240 to ¥120 over 1985-1988 (50%). Japan forced to undertake massive monetary easing to offset export drag, creating asset bubble (Nikkei peaks 1989, real estate peaks 1991). Bubble bursts, Japan enters 'lost decades'. Japanese institutional investors (MoF, postal savings, insurers) continue buying US Treasuries throughout, funding US deficits. Plaza Accord is the second major 'debt burden export' — US offloads adjustment cost onto Japan's financial system, creating permanent stagnation.",
+    "mechanism_ussr_collapse_1991": "Third one-time extraction: ex-Soviet intellectual property, natural resources, and dollarization of post-Soviet space generate massive windfall. Russian brain drain supplies US tech sector. Oil/gas resources come under Western extraction terms. This creates the 'peace dividend' illusion that US K can rise without consequence.",
+    "mechanism_china_treasury_accumulation_2000_2015": "China pegs yuan to dollar, accumulates $1T+ in Treasuries. Suppresses US interest rates, enables housing bubble and federal deficit expansion. Functionally identical to Japan's role in 1980s-1990s: export surplus recycled into US debt, suppressing domestic consumption in creditor country.",
+    "period_2000_2036_projection": "Post-2000: all three external debt export mechanisms mature and decline. Japan is maxed out (250% debt/GDP). Europe faces structural stagnation. China diversifies from Treasuries (holdings drop from $1.3T 2013 to $800B 2024). De-dollarization accelerates (BRICS, bilateral swap lines). US must absorb its own debt internally for first time since 1971. This is the structural break that the model projects will force K upward as elites defend position through domestic extraction (healthcare rents, platform monopolization, fiscal regressivity) rather than external burden-shifting. The external_debt_burden_export_index rises from 0.0 (1945) to ~0.72 (2036 projection) as the mechanism exhausts — meaning the US can no longer export its adjustment costs, and domestic K accelerates.",
+    "mechanisms_of_k_rise": [
+      "Bretton Woods collapse (1971): removes external discipline, enables persistent deficits",
+      "Smithsonian Agreement (1971-73): forced yen/D-mark revaluation, exports inflation",
+      "Petrodollar recycling (1973+): Saudi/Treasury deal, dollar demand for oil trade",
+      "Plaza Accord (1985): forced yen appreciation breaks Japan's export model, Japan buys Treasuries",
+      "USSR collapse (1991): one-time resource/brain extraction, dollar hegemony expansion",
+      "Glass-Steagall repeal (1999): removes firewall between commercial and investment banking",
+      "China Treasury accumulation (2000-2013): suppresses US rates, enables housing bubble",
+      "QE programs (2008-2022): asset purchases disproportionately benefit wealth holders",
+      "Citizens United (2010): unlimited corporate political spending",
+      "Platform monopolization: network effects create rent-extracting tech giants"
+    ],
+    "mechanisms_of_k_postponement": [
+      "Smithsonian/Plaza forced revaluations: export debt burden to Japan/Europe",
+      "Petrodollar system: dollar demand for oil transactions",
+      "Japan Treasury purchases: fund US deficits 1985-2010",
+      "China Treasury purchases: fund US deficits 2000-2015",
+      "USSR collapse: one-time resource extraction and dollarization",
+      "Tech/AI boom: productivity gains temporarily offset K drag on T",
+      "Shale revolution: energy independence reduces trade deficit pressure",
+      "Dollar reserve status: persistent demand for Treasuries at suppressed rates"
+    ]
+  }
 }
