@@ -154,6 +154,35 @@ The following must appear somewhere in every paper. Not all in the abstract — 
 
 ---
 
+## Model–Paper Disclosure (v4.1+)
+
+- Every state variable, mechanism, stochastic element, reset rule, or per-civilization hand-set input that affects simulated trajectories MUST appear in the paper's model description — no exceptions, regardless of whether ablation shows it is load-bearing
+- Every parameter key in `data/parameters.json` (default_model and civilizations blocks) MUST be traceable to a passage, equation, or table in the paper; the CI parameter-disclosure check enforces this mechanically
+- Ablation results for any documented mechanism MUST be reported alongside its description (emphasis may follow contribution; disclosure may not)
+- The model section's equations MUST match `edap_model/dynamics.py` exactly; if they diverge, the code is wrong or the paper is wrong — fix before release
+
+## Statistical Reporting (v4.1+)
+
+- Never lead the abstract or conclusions with an in-sample (calibration-set) number; out-of-sample (leave-one-civilization-out) results are the headline empirical statistics
+- Never report a turn accuracy without its persistence and majority-sign baseline comparison
+- Never use the i.i.d. binomial null as the only test for turn accuracy; serial correlation must be respected (block permutation) or the weakness stated
+- Every civilization's turn accuracy carries an exact binomial p-value and a Wilson 95% CI
+- Point parameter estimates must be accompanied by their posterior/credible intervals once the Bayesian layer exists; "point estimate" claims without intervals are not permitted
+- Brier Skill Scores must be reported for what they are (model vs climatology on the binary K-crossing task), never reframed as success when negative
+
+## Proxy Data Construction Rules (v4.1+)
+
+Apply to every new civilization added to `data/raw/`:
+
+- Every indicator in `T_proxies`/`K_proxies`/`C_proxies` MUST have an entry in the file's `data_sources` naming at least one citable source
+- Every data point MUST carry an `estimate_basis` note stating how the values were derived (documented value / interpolation between sourced anchors / expert estimate)
+- Reuse existing indicator names and normalization weights wherever possible; a new indicator requires a matching entry in `data/normalization_params.json` (weight, min_global, max_global, description)
+- Contested datings or values MUST be flagged in the file's `notes` field
+- Uncertainty is graded A (sourced quantitative), B (sourced qualitative range), C (expert estimate) and recorded for the proxy-validity table
+- Minimum 8 data points per civilization; anchor spacing must reflect the civilization's actual turning points, not convenient round dates
+
+---
+
 ## Quick Reference
 
 **Before writing any sentence about EDAP, ask:**

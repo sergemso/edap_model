@@ -12,7 +12,33 @@
 
 ---
 
-## v5.0: Quantitative Filter Model (Target: Q4 2026)
+## v4.1: Hardening + Selective v5.0 Pull-Forward (Target: December 2026)
+
+Decided 2026-10-18 (ADR-022…029) after a full audit of v4.0. Implementation plan: `docs/plans/v4_1_hardening.md`. Target venue: *International Journal of Astrobiology*.
+
+### Integrity fixes (ADR-023, ADR-024)
+- Ablate the reset/recovery mechanism (hidden 4th state + stochastic resets), then document it fully in the paper with ablation table and hand-set-inputs disclosure
+- Unify GPU/CPU dynamics semantics; permanent parity test in CI
+
+### Statistical protocol v2 (ADR-025)
+- Persistence/majority baselines + block-permutation null; per-civilization exact tests and Wilson CIs
+- Leave-one-civilization-out cross-validation as the headline empirical number (needs the expanded sample)
+- Bifurcation sensitivity sweep + recalibration with widened α_K bounds (kill the boundary-artifact objection)
+
+### Pulled forward from v5.0 (ADR-022)
+- Sample expansion: Byzantium + Japan (load-bearing, enable 6-fold LOO-CV); Tang/Song China + Britain (stretch)
+- Bayesian ABC-style calibration (emcee) with identifiability review (ADR-026)
+- Proxy validation: modern-era external correlations (WID/V-Dem/WVS/OWID) + face-validity grading (ADR-027)
+
+### Paper revision (ADR-028, ADR-029)
+- Methods section (normalization + incommensurability caveat, calibration, LOO protocol, metrics)
+- Fermi prior-art engagement (Haqq-Misra & Baum 2009, Kinouchi 2001, Landis 1999, Ćirković 2018; Seshat mention) + universality argument as labeled conjecture
+- Terminology defense + neutral synonym; Dark Ages historiography caveat; abstract rewrite (out-of-sample lead)
+- CI guardrail check extended: every parameters.json key must appear in the paper
+
+---
+
+## v5.0: Quantitative Filter Model (Target: Q4 2026 → shifted by v4.1 completion)
 
 ### Core Extensions
 
@@ -26,19 +52,19 @@
 - Threshold S_min for astronomical detection (JWST, future telescopes)
 - Filter defined as S_tech < S_min for cosmologically significant duration
 
-**3. Bayesian calibration**
+**3. Bayesian calibration** — ABC layer delivered in v4.1 (ADR-026); v5.0 upgrades to full replacement of differential evolution
 - Replace differential evolution with MCMC (emcee or PyMC)
 - Posterior distributions for all parameters
 - Predictive intervals for N(t), S_tech(t)
 - Proper uncertainty quantification
 
-**4. Expanded historical sample**
+**4. Expanded historical sample** — partially delivered in v4.1 (Byzantium, Japan, China, Britain); v5.0 adds more if v4.1 stretch items did not land
 - Byzantium (500–1453 CE): 8-10 data points
 - Dynastic China (Tang/Song/Ming): 5-7 points per dynasty
 - Japan (1868–2024): 8-10 points
 - Enables cross-validation and reduces overfitting
 
-**5. Proxy validation**
+**5. Proxy validation** — delivered in v4.1 (ADR-027); v5.0 extends depth
 - Correlation analysis against V-Dem, Polity IV, Economic Freedom Index
 - Face validity documentation for ancient proxies
 - Sensitivity analysis to proxy weights

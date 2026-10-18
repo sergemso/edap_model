@@ -26,6 +26,9 @@ edap_model/
 ├── README.md                            # Project overview, installation, usage
 ├── ROADMAP.md                           # Future development plan
 ├── THESES.md                            # Central argumentation chain and claims for the paper
+├── docs/
+│   └── plans/
+│       └── v4_1_hardening.md            # Changeset implementation plan for the v4.1 cycle (ADR-022…029)
 ├── calibrate.py                         # Parameter calibration via differential evolution
 ├── requirements.txt                     # Python dependencies
 ├── run_model.py                         # Main entry point — full analysis pipeline
@@ -159,12 +162,20 @@ edap_model/
 #### `ROADMAP.md`
 **Purpose:** Future development plan for the EDAP model.
 **What it contains:**
+- v4.1: Hardening + selective v5.0 pull-forward (integrity fixes, statistical protocol v2, Byzantium/Japan/China/Britain, Bayesian ABC, proxy validation; decided ADR-022…029)
 - v5.0: Quantitative filter model (N(t), S_tech, Bayesian calibration, expanded sample)
 - v6.0: Multi-elite dynamics
 - v7.0: Spatial and inter-civilizational dynamics
 - Ongoing: Real-time K-index monitoring
 - Contribution guidelines
 **When to use:** When planning future work, writing grant proposals, or onboarding new collaborators.
+
+#### `docs/plans/v4_1_hardening.md`
+**Purpose:** Step-by-step changeset implementation plan for the v4.1 cycle (created 2026-10-18 by the roadmap session that produced ADR-022…029).
+**What it contains:**
+- 25 steps in 7 phases: integrity fixes (parity, ablation), statistical protocol v2 (baselines, CIs, LOO-CV, bifurcation sensitivity), new civilizations, Bayesian calibration, proxy validation, paper revision, release
+- Per-step context, commands, and done-when criteria; markers updated in place as work progresses
+**When to use:** When executing or resuming the v4.1 cycle; `go-getter plan next docs/plans/v4_1_hardening.md` reports the ready steps.
 
 #### `THESES.md`
 **Purpose:** Central argumentation chain for the EDAP paper.
